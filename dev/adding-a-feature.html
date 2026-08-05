@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Adding a feature: the checklist# Every user-facing feature touches the same five places. Skipping one either fails CI or leaves the docs/palette out of sync (the smoke suite catches that too).
+Logic in Core. Write the testable rules in Playcraft.Core with XML doc comments (missing docs on public APIs fail the build) and unit tests in tests/Playcraft.Core.Tests (the 80% coverage gate applies).
+Adapter in the plugin. Add the [CommandMethod(&#34;PBXXX&#34;)] shim in src/Playcraft.Plugin, collecting drawing data and delegating to Core. Stick to ApplicationServices.Core APIs so the command still works under accoreconsole.
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="/dev/adding-a-feature.html">
+	<meta property="og:site_name" content="Playcraft Suite">
+	<meta property="og:title" content="Adding a feature">
+	<meta property="og:description" content="Adding a feature: the checklist# Every user-facing feature touches the same five places. Skipping one either fails CI or leaves the docs/palette out of sync (the smoke suite catches that too).
+Logic in Core. Write the testable rules in Playcraft.Core with XML doc comments (missing docs on public APIs fail the build) and unit tests in tests/Playcraft.Core.Tests (the 80% coverage gate applies).
+Adapter in the plugin. Add the [CommandMethod(&#34;PBXXX&#34;)] shim in src/Playcraft.Plugin, collecting drawing data and delegating to Core. Stick to ApplicationServices.Core APIs so the command still works under accoreconsole.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="dev">
+
+
+	<meta itemprop="name" content="Adding a feature">
+	<meta itemprop="description" content="Adding a feature: the checklist# Every user-facing feature touches the same five places. Skipping one either fails CI or leaves the docs/palette out of sync (the smoke suite catches that too).
+Logic in Core. Write the testable rules in Playcraft.Core with XML doc comments (missing docs on public APIs fail the build) and unit tests in tests/Playcraft.Core.Tests (the 80% coverage gate applies).
+Adapter in the plugin. Add the [CommandMethod(&#34;PBXXX&#34;)] shim in src/Playcraft.Plugin, collecting drawing data and delegating to Core. Stick to ApplicationServices.Core APIs so the command still works under accoreconsole.">
+	<meta itemprop="wordCount" content="193">
+
+<title>Adding a feature • Playcraft Suite</title>
+<link rel="icon" href="../favicon.png" >
+<link rel="manifest" href="../manifest.json">
+<link rel="canonical" href="../dev/adding-a-feature.html">
+<link rel="stylesheet" href="../book.min.683429ca61d86ac58205918e8a59ec4b94d2f27cb90f702359eb41c485926af9.css" >
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-dev">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="../index.html"><span>Playcraft Suite</span>
+  </a>
+</h2>
+
+
+
+
+
+<nav class="pc-tabs">
+  <a href="../user/index.html">🛝 User Guide</a>
+  <a href="../dev/index.html">🧰 Developer</a>
+  <a href="../api/index.html">📖 API</a>
+</nav>
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../user/index.html" class="">
+      User Guide</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../user/quickstart.html" class="">
+      Quick Start</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../dev/index.html" class="">
+      Developer Guide</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../dev/adding-a-feature.html" class="active">
+      Adding a feature</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../dev/api-reference.html" class="">
+      API reference (Playcraft.Core)</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="../icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Adding a feature</h3>
+
+  <label for="toc-control">
+    
+    <img src="../icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="adding-a-feature-the-checklist">Adding a feature: the checklist<a class="anchor" href="#adding-a-feature-the-checklist">#</a></h1>
+<p>Every user-facing feature touches the same five places. Skipping one either
+fails CI or leaves the docs/palette out of sync (the smoke suite catches that
+too).</p>
+<ol>
+<li>
+<p><strong>Logic in Core.</strong> Write the testable rules in <code>Playcraft.Core</code> with XML doc
+comments (missing docs on public APIs fail the build) and unit tests in
+<code>tests/Playcraft.Core.Tests</code> (the 80% coverage gate applies).</p>
+</li>
+<li>
+<p><strong>Adapter in the plugin.</strong> Add the <code>[CommandMethod(&quot;PBXXX&quot;)]</code> shim in
+<code>src/Playcraft.Plugin</code>, collecting drawing data and delegating to Core.
+Stick to <code>ApplicationServices.Core</code> APIs so the command still works under
+accoreconsole.</p>
+</li>
+<li>
+<p><strong>Declare it in <code>data/features.json</code>.</strong> This is the single source of truth
+for the palette AND the User Guide tab:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;command&#34;</span>: <span style="color:#e6db74">&#34;PBXXX&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;userDescription&#34;</span>: <span style="color:#e6db74">&#34;What a designer sees in the palette and docs.&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;category&#34;</span>: <span style="color:#e6db74">&#34;Layout&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;screenshotPath&#34;</span>: <span style="color:#e6db74">&#34;images/pbxxx.png&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;addedInVersion&#34;</span>: <span style="color:#e6db74">&#34;0.2.0&#34;</span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div><p><code>Playcraft.Core.Tests</code> validates the file&rsquo;s schema; the smoke suite verifies
+every declared command actually exists in the built plugin.</p>
+</li>
+<li>
+<p><strong>Screenshot (optional but encouraged).</strong> Drop it at
+<code>docs/site/static/images/pbxxx.png</code>. Until it exists, set
+<code>screenshotPath</code> to <code>null</code> and the docs will skip the image gracefully.</p>
+</li>
+<li>
+<p><strong>Rebuild the docs</strong> with <code>docs/build-docs.ps1</code> and eyeball the User Guide
+tab. CI regenerates the site on every push, so drift can&rsquo;t survive a PR.</p>
+</li>
+</ol>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+<div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="../dev/index.html" class="flex align-center">
+        <img src="../icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>Developer Guide</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="../dev/api-reference.html" class="flex align-center">
+        <span>API reference (Playcraft.Core)</span>
+        <img src="../icons/forward.svg" class="book-icon" alt="Forward" />
+      </a>
+    
+    </span>
+  </div>
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents"></nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

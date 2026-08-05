@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>Class MateSnapQuery | Playcraft.Core API </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="Class MateSnapQuery | Playcraft.Core API ">
+    
+    <meta name="description" content="A mate search bound to one child part. Construction resolves compatibility per host and indexes the compatible world points in a ;  then answers from the pick&#39;s neighborhood only, re-running the exact distance and occupancy predicates of the per-host scan so the answer matches  bit-for-bit.">
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../api/Playcraft.Core.html" title="API Reference">API Reference</a>
+                      </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Playcraft.Core.html" title="Playcraft.Core" class="">Playcraft.Core</a>
+
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Playcraft.Core.AgeFit.html" title="AgeFit" class="">AgeFit</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.BomCalculator.html" title="BomCalculator" class="">BomCalculator</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.BomCsv.html" title="BomCsv" class="">BomCsv</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.BomCsvResult.html" title="BomCsvResult" class="">BomCsvResult</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.BomLine.html" title="BomLine" class="">BomLine</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.BomSection.html" title="BomSection" class="">BomSection</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.Box3.html" title="Box3" class="">Box3</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.BoxGrid.html" title="BoxGrid" class="">BoxGrid</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.CatalogFilter.html" title="CatalogFilter" class="">CatalogFilter</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.CatalogFit.html" title="CatalogFit" class="">CatalogFit</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.CatalogLookup.html" title="CatalogLookup" class="">CatalogLookup</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.CatalogPart.html" title="CatalogPart" class="">CatalogPart</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.CatalogPayload.html" title="CatalogPayload" class="">CatalogPayload</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.CollarCounter.html" title="CollarCounter" class="">CollarCounter</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.ComponentLibrary.html" title="ComponentLibrary" class="">ComponentLibrary</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.ComponentTypes.html" title="ComponentTypes" class="">ComponentTypes</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.DeckHeightCheck.html" title="DeckHeightCheck" class="">DeckHeightCheck</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.DeckHeightRule.html" title="DeckHeightRule" class="">DeckHeightRule</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.DeckHeightVerdict.html" title="DeckHeightVerdict" class="">DeckHeightVerdict</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.DeckToDeck.html" title="DeckToDeck" class="">DeckToDeck</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.DependencyBinding.html" title="DependencyBinding" class="">DependencyBinding</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.DependencyCatalog.html" title="DependencyCatalog" class="">DependencyCatalog</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.DependencyFinding.html" title="DependencyFinding" class="">DependencyFinding</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.DependencyIssue.html" title="DependencyIssue" class="">DependencyIssue</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.DependencyPlan.html" title="DependencyPlan" class="">DependencyPlan</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.DependencyPlanner.html" title="DependencyPlanner" class="">DependencyPlanner</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.DependencyTally.html" title="DependencyTally" class="">DependencyTally</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.DependentChoice.html" title="DependentChoice" class="">DependentChoice</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.DependentSelector.html" title="DependentSelector" class="">DependentSelector</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.EnvFile.html" title="EnvFile" class="">EnvFile</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.FeatureCatalog.html" title="FeatureCatalog" class="">FeatureCatalog</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.FeatureDefinition.html" title="FeatureDefinition" class="">FeatureDefinition</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.FillerAction.html" title="FillerAction" class="">FillerAction</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.FillerCatalog.html" title="FillerCatalog" class="">FillerCatalog</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.FillerDecision.html" title="FillerDecision" class="">FillerDecision</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.FillerDeck.html" title="FillerDeck" class="">FillerDeck</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.FillerEntry.html" title="FillerEntry" class="">FillerEntry</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.FillerMatePoint.html" title="FillerMatePoint" class="">FillerMatePoint</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.FillerPlacement.html" title="FillerPlacement" class="">FillerPlacement</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.FillerPlan.html" title="FillerPlan" class="">FillerPlan</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.FillerPlanner.html" title="FillerPlanner" class="">FillerPlanner</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.FillerSelector.html" title="FillerSelector" class="">FillerSelector</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.FootprintStackRule.html" title="FootprintStackRule" class="">FootprintStackRule</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.FreestandingSections.html" title="FreestandingSections" class="">FreestandingSections</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.HardwareCalculator.html" title="HardwareCalculator" class="">HardwareCalculator</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.HardwareRules.html" title="HardwareRules" class="">HardwareRules</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.HeightLabel.html" title="HeightLabel" class="">HeightLabel</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.HeightResolver.html" title="HeightResolver" class="">HeightResolver</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.KcdAttachmentPoint.html" title="KcdAttachmentPoint" class="">KcdAttachmentPoint</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.KcdComponent.html" title="KcdComponent" class="">KcdComponent</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.KcdComponentAddition.html" title="KcdComponentAddition" class="">KcdComponentAddition</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.KcdComponentUpdate.html" title="KcdComponentUpdate" class="">KcdComponentUpdate</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.KcdDesign.html" title="KcdDesign" class="">KcdDesign</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.KcdDesignTab.html" title="KcdDesignTab" class="">KcdDesignTab</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.KcdJson.html" title="KcdJson" class="">KcdJson</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.KcdJsonMeta.html" title="KcdJsonMeta" class="">KcdJsonMeta</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.KcdLayerAudit.html" title="KcdLayerAudit" class="">KcdLayerAudit</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.KcdLayerAuditResult.html" title="KcdLayerAuditResult" class="">KcdLayerAuditResult</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.KcdLayerDisagreement.html" title="KcdLayerDisagreement" class="">KcdLayerDisagreement</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.KcdLayers.html" title="KcdLayers" class="">KcdLayers</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.KcdLink.html" title="KcdLink" class="">KcdLink</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.KcdMatePoint.html" title="KcdMatePoint" class="">KcdMatePoint</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.KcdNewFile.html" title="KcdNewFile" class="">KcdNewFile</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.KcdNewPostSlot.html" title="KcdNewPostSlot" class="">KcdNewPostSlot</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.KcdPlacement.html" title="KcdPlacement" class="">KcdPlacement</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.KcdPostIds.html" title="KcdPostIds" class="">KcdPostIds</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.KcdPostReconciliation.html" title="KcdPostReconciliation" class="">KcdPostReconciliation</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.KcdPostSlot.html" title="KcdPostSlot" class="">KcdPostSlot</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.KcdReader.html" title="KcdReader" class="">KcdReader</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.KcdWriteResult.html" title="KcdWriteResult" class="">KcdWriteResult</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.KcdWriter.html" title="KcdWriter" class="">KcdWriter</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.LibraryEntry.html" title="LibraryEntry" class="">LibraryEntry</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.MateCandidateSet.html" title="MateCandidateSet" class="">MateCandidateSet</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.MateComponent.html" title="MateComponent" class="">MateComponent</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.MateHarvest.html" title="MateHarvest" class="">MateHarvest</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.MateHarvestResult.html" title="MateHarvestResult" class="">MateHarvestResult</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.MateLengthClass.html" title="MateLengthClass" class="">MateLengthClass</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.MateMarker.html" title="MateMarker" class="">MateMarker</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.MateMatcher.html" title="MateMatcher" class="">MateMatcher</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.MatePlacement.html" title="MatePlacement" class="">MatePlacement</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.MatePointRecord.html" title="MatePointRecord" class="">MatePointRecord</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.MateQueryResult.html" title="MateQueryResult" class="">MateQueryResult</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.MateRules.html" title="MateRules" class="">MateRules</a>
+                          </li>
+                          <li class="active">
+                            <a href="Playcraft.Core.MateSnapQuery.html" title="MateSnapQuery" class="active">MateSnapQuery</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.MateTable.html" title="MateTable" class="">MateTable</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.PlacedComponent.html" title="PlacedComponent" class="">PlacedComponent</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.Placement3D.html" title="Placement3D" class="">Placement3D</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.PlannedPost.html" title="PlannedPost" class="">PlannedPost</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.PointGrid.html" title="PointGrid" class="">PointGrid</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.PointSnapper.html" title="PointSnapper" class="">PointSnapper</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.PostFamilies.html" title="PostFamilies" class="">PostFamilies</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.PostMerge.html" title="PostMerge" class="">PostMerge</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.PostNumberFormatter.html" title="PostNumberFormatter" class="">PostNumberFormatter</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.PostPlanner.html" title="PostPlanner" class="">PostPlanner</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.PostSlot.html" title="PostSlot" class="">PostSlot</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.PostSpec.html" title="PostSpec" class="">PostSpec</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.PriceBook.html" title="PriceBook" class="">PriceBook</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.PriceEntry.html" title="PriceEntry" class="">PriceEntry</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.PricedBomBuilder.html" title="PricedBomBuilder" class="">PricedBomBuilder</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.PricedBomResult.html" title="PricedBomResult" class="">PricedBomResult</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.PricedRow.html" title="PricedRow" class="">PricedRow</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.Pt.html" title="Pt" class="">Pt</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.QuoteSections.html" title="QuoteSections" class="">QuoteSections</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.Scene3DPlacement.html" title="Scene3DPlacement" class="">Scene3DPlacement</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.SectionKind.html" title="SectionKind" class="">SectionKind</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.SnapOutcome.html" title="SnapOutcome" class="">SnapOutcome</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.SnapPoint.html" title="SnapPoint" class="">SnapPoint</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.SnapResult.html" title="SnapResult" class="">SnapResult</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.StackCandidate.html" title="StackCandidate" class="">StackCandidate</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.StackOutcome.html" title="StackOutcome" class="">StackOutcome</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.StackResult.html" title="StackResult" class="">StackResult</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.StructureCheck.html" title="StructureCheck" class="">StructureCheck</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.StructureGrouper.html" title="StructureGrouper" class="">StructureGrouper</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.SubItemExploder.html" title="SubItemExploder" class="">SubItemExploder</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.SubItemExplosion.html" title="SubItemExplosion" class="">SubItemExplosion</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.SubItemLine.html" title="SubItemLine" class="">SubItemLine</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.SubItemRow.html" title="SubItemRow" class="">SubItemRow</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.Transform2.html" title="Transform2" class="">Transform2</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.UnitPrices.html" title="UnitPrices" class="">UnitPrices</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.VaultComponent.html" title="VaultComponent" class="">VaultComponent</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.VaultDescription.html" title="VaultDescription" class="">VaultDescription</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.VaultInventory.html" title="VaultInventory" class="">VaultInventory</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.VaultMatePoint.html" title="VaultMatePoint" class="">VaultMatePoint</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.VaultPolyline.html" title="VaultPolyline" class="">VaultPolyline</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.VaultSvgParser.html" title="VaultSvgParser" class="">VaultSvgParser</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.VaultXamlParser.html" title="VaultXamlParser" class="">VaultXamlParser</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.Xaml3DAssets.html" title="Xaml3DAssets" class="">Xaml3DAssets</a>
+                          </li>
+                          <li class="">
+                            <a href="Playcraft.Core.Xaml3DMeshes.html" title="Xaml3DMeshes" class="">Xaml3DMeshes</a>
+                          </li>
+                        </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Playcraft.Core.MateSnapQuery">
+
+
+
+  <h1 id="Playcraft_Core_MateSnapQuery" data-uid="Playcraft.Core.MateSnapQuery" class="text-break">Class MateSnapQuery</h1>
+  <div class="markdown level0 summary"><p>A mate search bound to one child part. Construction resolves compatibility
+per host and indexes the compatible world points in a
+<a class="xref" href="Playcraft.Core.PointGrid.html">PointGrid</a>; <a class="xref" href="Playcraft.Core.MateSnapQuery.html#Playcraft_Core_MateSnapQuery_Find_Playcraft_Core_Pt_System_Double_System_Double_">Find(Pt, double, double)</a> then answers from the pick's
+neighborhood only, re-running the exact distance and occupancy predicates
+of the per-host scan so the answer matches
+<a class="xref" href="Playcraft.Core.MateCandidateSet.html#Playcraft_Core_MateCandidateSet_FindSnapReference_Playcraft_Core_MatePointRecord_Playcraft_Core_Pt_System_Double_System_Double_">FindSnapReference(MatePointRecord, Pt, double, double)</a> bit-for-bit.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+    <div class="level1"><span class="xref">MateSnapQuery</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Playcraft.html">Playcraft</a>.<a class="xref" href="Playcraft.Core.html">Core</a></h6>
+  <h6><strong>Assembly</strong>: Playcraft.Core.dll</h6>
+  <h5 id="Playcraft_Core_MateSnapQuery_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public sealed class MateSnapQuery</code></pre>
+  </div>
+  <h3 id="methods">Methods
+</h3>
+  <a id="Playcraft_Core_MateSnapQuery_Find_" data-uid="Playcraft.Core.MateSnapQuery.Find*"></a>
+  <h4 id="Playcraft_Core_MateSnapQuery_Find_Playcraft_Core_Pt_System_Double_System_Double_" data-uid="Playcraft.Core.MateSnapQuery.Find(Playcraft.Core.Pt,System.Double,System.Double)">Find(Pt, double, double)</h4>
+  <div class="markdown level1 summary"><p>Finds the capture for a pick: the strictly nearest free compatible
+point within the closed capture radius, ties resolved to the earlier
+host and then the earlier compatible point — the same preference order
+the per-host scan produces.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public MateQueryResult Find(Pt pick, double captureRadius = 8, double occupancyRadius = 2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Playcraft.Core.Pt.html">Pt</a></td>
+        <td><span class="parametername">pick</span></td>
+        <td><p>The pick point, world coordinates.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td><span class="parametername">captureRadius</span></td>
+        <td><p>Capture radius override (inches, inclusive).</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td><span class="parametername">occupancyRadius</span></td>
+        <td><p>Occupancy radius override (inches, inclusive).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Playcraft.Core.MateQueryResult.html">MateQueryResult</a></td>
+        <td><p>The capture decision.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <a id="Playcraft_Core_MateSnapQuery_Nearby_" data-uid="Playcraft.Core.MateSnapQuery.Nearby*"></a>
+  <h4 id="Playcraft_Core_MateSnapQuery_Nearby_Playcraft_Core_Pt_System_Double_System_Double_" data-uid="Playcraft.Core.MateSnapQuery.Nearby(Playcraft.Core.Pt,System.Double,System.Double)">Nearby(Pt, double, double)</h4>
+  <div class="markdown level1 summary"><p>The compatible mate points within <code class="paramref">radius</code> of a point,
+each flagged free or occupied, nearest first. This is what the jig draws
+while the designer drags, so &quot;this edge is full&quot; and &quot;you are too far
+out&quot; stop looking identical.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public IReadOnlyList&lt;MateMarker&gt; Nearby(Pt at, double radius, double occupancyRadius = 2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Playcraft.Core.Pt.html">Pt</a></td>
+        <td><span class="parametername">at</span></td>
+        <td><p>Centre of the neighborhood, world coordinates.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td><span class="parametername">radius</span></td>
+        <td><p>Neighborhood radius, inches (inclusive).</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></td>
+        <td><span class="parametername">occupancyRadius</span></td>
+        <td><p>Occupancy radius override (inches, inclusive).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1">IReadOnlyList</a>&lt;<a class="xref" href="Playcraft.Core.MateMarker.html">MateMarker</a>&gt;</td>
+        <td><p>The markers, nearest first; empty when no host accepts this child at all.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Playcraft_Core_MateSnapQuery_Nearby_Playcraft_Core_Pt_System_Double_System_Double__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>One neighborhood walk answers the picture AND the prompt text, so a
+drag costs a single grid query per sample rather than a capture query
+plus a wide nearest-point probe. Same grid and same occupancy predicate
+as <a class="xref" href="Playcraft.Core.MateSnapQuery.html#Playcraft_Core_MateSnapQuery_Find_Playcraft_Core_Pt_System_Double_System_Double_">Find(Pt, double, double)</a>: a point drawn free is a point that would capture.</p>
+</div>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      Generated from XML doc comments — do not edit.
+      
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Playcraft Suite quick start# Playground design tools for AutoCAD 2027.
+Install# Download: https://github.com/playcraftSystems/PlaycraftSuite/releases/latest/download/Playcraft.bundle.zip
+The repo is private, so open that link in a browser signed in to a GitHub account that has access. An anonymous download returns 404.
+Download Playcraft.bundle.zip. Extract the whole zip. The installer will not run from inside it. Run install.cmd. It installs per user and needs no admin rights. Restart AutoCAD 2027. You need Windows x64, AutoCAD 2027, and access to the component library folder (local or network). A pricing token is optional and affects only live pricing and PBSYNC.
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="/user/quickstart.html">
+	<meta property="og:site_name" content="Playcraft Suite">
+	<meta property="og:title" content="Quick Start">
+	<meta property="og:description" content="Playcraft Suite quick start# Playground design tools for AutoCAD 2027.
+Install# Download: https://github.com/playcraftSystems/PlaycraftSuite/releases/latest/download/Playcraft.bundle.zip
+The repo is private, so open that link in a browser signed in to a GitHub account that has access. An anonymous download returns 404.
+Download Playcraft.bundle.zip. Extract the whole zip. The installer will not run from inside it. Run install.cmd. It installs per user and needs no admin rights. Restart AutoCAD 2027. You need Windows x64, AutoCAD 2027, and access to the component library folder (local or network). A pricing token is optional and affects only live pricing and PBSYNC.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="user">
+
+
+	<meta itemprop="name" content="Quick Start">
+	<meta itemprop="description" content="Playcraft Suite quick start# Playground design tools for AutoCAD 2027.
+Install# Download: https://github.com/playcraftSystems/PlaycraftSuite/releases/latest/download/Playcraft.bundle.zip
+The repo is private, so open that link in a browser signed in to a GitHub account that has access. An anonymous download returns 404.
+Download Playcraft.bundle.zip. Extract the whole zip. The installer will not run from inside it. Run install.cmd. It installs per user and needs no admin rights. Restart AutoCAD 2027. You need Windows x64, AutoCAD 2027, and access to the component library folder (local or network). A pricing token is optional and affects only live pricing and PBSYNC.">
+	<meta itemprop="wordCount" content="1531">
+
+<title>Quick Start • Playcraft Suite</title>
+<link rel="icon" href="../favicon.png" >
+<link rel="manifest" href="../manifest.json">
+<link rel="canonical" href="../user/quickstart.html">
+<link rel="stylesheet" href="../book.min.683429ca61d86ac58205918e8a59ec4b94d2f27cb90f702359eb41c485926af9.css" >
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-user">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="../index.html"><span>Playcraft Suite</span>
+  </a>
+</h2>
+
+
+
+
+
+<nav class="pc-tabs">
+  <a href="../user/index.html">🛝 User Guide</a>
+  <a href="../dev/index.html">🧰 Developer</a>
+  <a href="../api/index.html">📖 API</a>
+</nav>
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../user/index.html" class="">
+      User Guide</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../user/quickstart.html" class="active">
+      Quick Start</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../dev/index.html" class="">
+      Developer Guide</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../dev/adding-a-feature.html" class="">
+      Adding a feature</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../dev/api-reference.html" class="">
+      API reference (Playcraft.Core)</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="../icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Quick Start</h3>
+
+  <label for="toc-control">
+    
+    <img src="../icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#install">Install</a></li>
+    <li><a href="#first-run">First run</a></li>
+    <li><a href="#commands">Commands</a>
+      <ul>
+        <li><a href="#setup">Setup</a></li>
+        <li><a href="#place-parts">Place parts</a></li>
+        <li><a href="#structure">Structure</a></li>
+        <li><a href="#view-in-3d">View in 3D</a></li>
+        <li><a href="#count-and-price">Count and price</a></li>
+        <li><a href="#design-files-kcd">Design files (.kcd)</a></li>
+        <li><a href="#diagnostics">Diagnostics</a></li>
+      </ul>
+    </li>
+    <li><a href="#your-first-layout">Your first layout</a></li>
+    <li><a href="#group-each-structure">Group each structure</a></li>
+    <li><a href="#if-something-looks-wrong">If something looks wrong</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="playcraft-suite-quick-start">Playcraft Suite quick start<a class="anchor" href="#playcraft-suite-quick-start">#</a></h1>
+<p>Playground design tools for AutoCAD 2027.</p>
+<h2 id="install">Install<a class="anchor" href="#install">#</a></h2>
+<p>Download: <a href="https://github.com/playcraftSystems/PlaycraftSuite/releases/latest/download/Playcraft.bundle.zip">https://github.com/playcraftSystems/PlaycraftSuite/releases/latest/download/Playcraft.bundle.zip</a></p>
+<p>The repo is private, so open that link in a browser signed in to a GitHub
+account that has access. An anonymous download returns 404.</p>
+<ol>
+<li>Download <code>Playcraft.bundle.zip</code>.</li>
+<li>Extract the whole zip. The installer will not run from inside it.</li>
+<li>Run <code>install.cmd</code>. It installs per user and needs no admin rights.</li>
+<li>Restart AutoCAD 2027.</li>
+</ol>
+<p>You need Windows x64, AutoCAD 2027, and access to the component library folder
+(local or network). A pricing token is optional and affects only live pricing
+and <code>PBSYNC</code>.</p>
+<p><strong>Update:</strong> run the new zip&rsquo;s <code>install.cmd</code>.
+<strong>Uninstall:</strong> delete <code>%APPDATA%\Autodesk\ApplicationPlugins\Playcraft.bundle</code>.
+<strong>Developers:</strong> <code>dotnet build PlaycraftSuite.slnx -c Release</code>, then <code>NETLOAD</code>
+the DLL. See the <a href="https://github.com/playcraftSystems/PlaycraftSuite/blob/main/README.md#quickstart-dev-machine">README</a>.</p>
+<h2 id="first-run">First run<a class="anchor" href="#first-run">#</a></h2>
+<p>If no library is configured, the setup window opens by itself. <code>PBSETUP</code>
+reopens it any time.</p>
+<ol>
+<li>Browse to the folder whose children are the family folders (Access
+Components, Decks, and so on). The window reports what it found, such as
+<code>233 families, 6516 components</code>. A wrong folder reads back <code>0 families</code>
+before anything is saved.</li>
+<li>Paste a pricing token if you have one and press Test connection. Blank is
+fine.</li>
+</ol>
+<p>Without a library everything still runs, but parts place as labeled
+placeholder blocks instead of real geometry.</p>
+<h2 id="commands">Commands<a class="anchor" href="#commands">#</a></h2>
+<p><code>*</code> marks commands that need the component library.</p>
+<h3 id="setup">Setup<a class="anchor" href="#setup">#</a></h3>
+<table>
+	<thead>
+			<tr>
+					<th>Command</th>
+					<th>What it does</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>PBSETUP</code></td>
+					<td>Setup window: library folder and pricing token, both checked on the spot.</td>
+			</tr>
+			<tr>
+					<td><code>PBVAULT</code></td>
+					<td>Set the library path from the command line. Reports what it finds there.</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="place-parts">Place parts<a class="anchor" href="#place-parts">#</a></h3>
+<table>
+	<thead>
+			<tr>
+					<th>Command</th>
+					<th>What it does</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>PBCATALOG</code> *</td>
+					<td>Catalog panel. Browse by family, search, filter by age group or price. Double-click a part to place it.</td>
+			</tr>
+			<tr>
+					<td><code>PBFIT</code> *</td>
+					<td>Click a placed part. The catalog then lists only parts that fit it.</td>
+			</tr>
+			<tr>
+					<td><code>PBSTAMP</code> *</td>
+					<td>Placement loop. A ghost follows the cursor and snaps to compatible connection points; click inside a placed deck to stack the next storey on it. Click to place, type <code>Free</code> to toggle the magnet, Enter to finish.</td>
+			</tr>
+			<tr>
+					<td><code>PBATTACH</code> *</td>
+					<td>Click near a deck edge to snap the 24 inch Poly Wave Slide onto the nearest free point. Place other slides from the catalog.</td>
+			</tr>
+			<tr>
+					<td><code>PBMATES</code></td>
+					<td>Show every connection point in the drawing — green free, grey taken. Run again to hide. Drawn over the drawing, never added to it.</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="structure">Structure<a class="anchor" href="#structure">#</a></h3>
+<table>
+	<thead>
+			<tr>
+					<th>Command</th>
+					<th>What it does</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>PBGEN</code></td>
+					<td>Generate support posts for every deck, with one shared post where decks meet. Move decks and run it again. No prompts.</td>
+			</tr>
+			<tr>
+					<td><code>PBFILL</code> *</td>
+					<td>Place the barrier fillers that close gaps where decks of different heights share posts. Re-run to update. No prompts.</td>
+			</tr>
+			<tr>
+					<td><code>PBHEIGHT</code></td>
+					<td>Change a placed deck&rsquo;s height. Click a deck, or press Enter for every deck. Heights step by 6 inches and are checked against the deck&rsquo;s age ratings. Re-runs <code>PBGEN</code> and <code>PBFILL</code> so posts and fillers follow.</td>
+			</tr>
+			<tr>
+					<td><code>PBLEVEL</code></td>
+					<td>List the drawing&rsquo;s storeys — which level each component stands on, exactly as an export will number them. Imported designs keep the file&rsquo;s own storey numbers; native parts derive theirs. Name a level to select everything on it. Report only.</td>
+			</tr>
+			<tr>
+					<td><code>PBMIGRATEZ</code></td>
+					<td>Lift an older flat drawing to real heights. Parts whose height label proves where they belong move there; anything unproven stays flat and is named. Safe to re-run.</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="view-in-3d">View in 3D<a class="anchor" href="#view-in-3d">#</a></h3>
+<table>
+	<thead>
+			<tr>
+					<th>Command</th>
+					<th>What it does</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>PB3D</code> *</td>
+					<td>Live 3D panel of every placed part, updating as you edit the 2D plan. Drag to orbit, right-drag to pan, wheel to zoom. Click a part to select it in the drawing. Parts with no 3D model show as orange boxes.</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="count-and-price">Count and price<a class="anchor" href="#count-and-price">#</a></h3>
+<table>
+	<thead>
+			<tr>
+					<th>Command</th>
+					<th>What it does</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>PBBOM</code></td>
+					<td>Parts list tallied by part number, split into sections by structure. Fully offline. Also breaks parts into their sub-parts when the parts database is set up.</td>
+			</tr>
+			<tr>
+					<td><code>PBPRICE</code></td>
+					<td>Parts list with MSRP and REP prices. Live prices with a token, the built-in price list otherwise.</td>
+			</tr>
+			<tr>
+					<td><code>PBEXPORTBOM</code></td>
+					<td>Save the priced parts list as a CSV that opens in Excel — sections by structure, rows split by level, totals matching <code>PBPRICE</code>.</td>
+			</tr>
+			<tr>
+					<td><code>PBPANEL</code></td>
+					<td>Live priced parts panel, including posts, collars, caps, and hardware. Updates after every edit.</td>
+			</tr>
+			<tr>
+					<td><code>PBSYNC</code></td>
+					<td>Refresh catalog data cached in the drawing. The only command that requires the pricing token.</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="design-files-kcd">Design files (.kcd)<a class="anchor" href="#design-files-kcd">#</a></h3>
+<table>
+	<thead>
+			<tr>
+					<th>Command</th>
+					<th>What it does</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>PBKCDINFO</code></td>
+					<td>Show component, post, and filler counts per tab. Does not touch the drawing.</td>
+			</tr>
+			<tr>
+					<td><code>PBIMPORTKCD</code> *</td>
+					<td>Import a <code>.kcd</code> tab at exact positions and rotations. Re-importing the same tab replaces instead of duplicating.</td>
+			</tr>
+			<tr>
+					<td><code>PBEXPORTKCD</code> *</td>
+					<td>Write the drawing out as a <code>.kcd</code>. Patch the file it came from, or author a new one. A <code>.json</code> copy is written alongside.</td>
+			</tr>
+			<tr>
+					<td><code>PBDEPS</code> *</td>
+					<td>Audit a <code>.kcd</code> for missing required attachments and broken links. Report only.</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="diagnostics">Diagnostics<a class="anchor" href="#diagnostics">#</a></h3>
+<table>
+	<thead>
+			<tr>
+					<th>Command</th>
+					<th>What it does</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>PBHELLO</code></td>
+					<td>Print one line to confirm the plugin loaded.</td>
+			</tr>
+			<tr>
+					<td><code>PBNUDGE</code></td>
+					<td>Test-script helper. Use the normal <code>MOVE</code> command instead.</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="your-first-layout">Your first layout<a class="anchor" href="#your-first-layout">#</a></h2>
+<ol>
+<li><code>PBCATALOG</code>, double-click Square Deck, accept height 48, click <code>0,0</code>, click
+<code>48,0</code>, press Enter. Two decks, snapped flush.</li>
+<li><code>PBGEN</code>. Posts appear, with the shared edge merged.</li>
+<li><code>PBPANEL</code>. Decks and posts counted and priced, live from here on.</li>
+</ol>
+<h2 id="group-each-structure">Group each structure<a class="anchor" href="#group-each-structure">#</a></h2>
+<p>A quote has to read structure by structure. A customer will not accept a price
+list where every part is in one pile with no idea which structure it belongs to.</p>
+<p>So tell the drawing what a structure is. Build one, run <code>GROUP</code>, name it, and
+select it.</p>
+<pre tabindex="0"><code>Command: GROUP
+Select objects or [Name/Description]: N
+Enter a group name or [?]: ToddlerArea
+Select objects or [Name/Description]: (window the structure)
+Select objects or [Name/Description]: (press Enter to finish)</code></pre><p>The <code>N</code> on the second line is a menu choice, not the name. Typing the name at
+that prompt gives you <code>*Invalid selection*</code>, because AutoCAD is still asking what
+to select. <code>N</code> switches it over to asking for a name, then puts you back to
+selecting.</p>
+<p>You do have to type <code>N</code> at some point. Skip it and AutoCAD makes an unnamed group,
+and an unnamed group cannot be a heading on a quote. Order does not matter: you
+can select the parts first and type <code>N</code> afterwards.</p>
+<p><strong>If the name gives you any trouble</strong>, select the parts first, then run
+<code>CLASSICGROUP</code> instead. That opens a dialog with a real text box. Type the name
+under Group Name, click New, window the parts, press Enter, click OK. Slower, but
+there is nothing to mistype. It is also how you rename a group later, and the
+only reliable way to put a space in a name.</p>
+<p>Use the name the customer should see. <code>ToddlerArea</code>, <code>5-12 Composite</code>, <code>Main Structure</code>. That exact text becomes the heading on the parts list and the quote,
+so it is worth typing properly the first time.</p>
+<p>Do one structure, then the next. One group per structure. Do not nest them.</p>
+<p>A few things happen for you after that:</p>
+<ul>
+<li><code>PBGEN</code> puts each new post in the group of the deck it holds up.</li>
+<li><code>PBFILL</code> puts each filler in the group of the deck it hangs off.</li>
+<li><code>PBATTACH</code> and <code>PBSTAMP</code> put a part in the group of whatever it snapped onto.</li>
+</ul>
+<p>So you can group a structure early and keep working on it. You do not have to
+regroup it every time you add something.</p>
+<p><strong>Benches, trash cans, and other site items</strong> can be left loose. They sort
+themselves onto the quote under Site Amenities based on what they are. Group them
+only if you want them under a heading of your own.</p>
+<p><strong>Swings</strong> are usually all one group. If you use the same swing set on lots of
+jobs, save it as its own drawing and bring it in with <code>XREF</code> instead. An external
+reference comes through as its own section, named after the drawing.</p>
+<p><strong>Do not turn a structure into a block.</strong> Grouping is safe and blocking is not. A
+block hides every part inside it, so they vanish from the parts list and the
+quote with no warning. Worse, if you block some of a structure and not the rest,
+the next <code>PBGEN</code> or <code>PBHEIGHT</code> will erase the posts and fillers it can no longer
+see. Use <code>GROUP</code>.</p>
+<p>Run <code>PBBOM</code> when you are done. It prints your structures by name, then anything
+brought in by reference, then loose site items, then shared hardware. If it
+reports parts as <code>Unassigned</code>, those are decks, posts, or fillers that are not in
+any group yet.</p>
+<h2 id="if-something-looks-wrong">If something looks wrong<a class="anchor" href="#if-something-looks-wrong">#</a></h2>
+<table>
+	<thead>
+			<tr>
+					<th>Symptom</th>
+					<th>Fix</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Parts place as placeholder blocks</td>
+					<td>The library is not reachable. Run <code>PBSETUP</code> and read what it reports.</td>
+			</tr>
+			<tr>
+					<td><code>PBBOM</code> says parts are <code>Unassigned</code></td>
+					<td>Those decks, posts, or fillers are in no group. Select the structure, run <code>GROUP</code>, and name it.</td>
+			</tr>
+			<tr>
+					<td>One structure prints as two sections</td>
+					<td>Its decks are split across two groups. <code>PBGEN</code> and <code>PBBOM</code> both report this. Put them in one group.</td>
+			</tr>
+			<tr>
+					<td>A whole structure is missing from the parts list</td>
+					<td>It was made into a block. Explode it, then <code>GROUP</code> it instead.</td>
+			</tr>
+			<tr>
+					<td>Setup says <code>0 families</code></td>
+					<td>The path is one level off. Pick the folder whose children are the family folders.</td>
+			</tr>
+			<tr>
+					<td>PB commands missing after install</td>
+					<td>Wrong AutoCAD year (2027 only), or the zip was not fully extracted before running <code>install.cmd</code>.</td>
+			</tr>
+			<tr>
+					<td>No live prices</td>
+					<td>No token, or it was revoked. <code>PBSETUP</code>, paste the token, Test connection. Offline prices keep working.</td>
+			</tr>
+	</tbody>
+</table>
+<p>More detail: <a href="https://github.com/playcraftSystems/PlaycraftSuite/blob/main/INSTALL.md#troubleshooting">INSTALL.md</a> and the
+<a href="https://playcraftsystems.github.io/block-party/">User Guide</a>.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+<div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="../user/index.html" class="flex align-center">
+        <img src="../icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>User Guide</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="../dev/index.html" class="flex align-center">
+        <span>Developer Guide</span>
+        <img src="../icons/forward.svg" class="book-icon" alt="Forward" />
+      </a>
+    
+    </span>
+  </div>
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#install">Install</a></li>
+    <li><a href="#first-run">First run</a></li>
+    <li><a href="#commands">Commands</a>
+      <ul>
+        <li><a href="#setup">Setup</a></li>
+        <li><a href="#place-parts">Place parts</a></li>
+        <li><a href="#structure">Structure</a></li>
+        <li><a href="#view-in-3d">View in 3D</a></li>
+        <li><a href="#count-and-price">Count and price</a></li>
+        <li><a href="#design-files-kcd">Design files (.kcd)</a></li>
+        <li><a href="#diagnostics">Diagnostics</a></li>
+      </ul>
+    </li>
+    <li><a href="#your-first-layout">Your first layout</a></li>
+    <li><a href="#group-each-structure">Group each structure</a></li>
+    <li><a href="#if-something-looks-wrong">If something looks wrong</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

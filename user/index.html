@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="User Guide: the feature catalog# Every Playcraft command available in AutoCAD 2027, grouped by task. Type the command name at the AutoCAD command line, or use the Playcraft palette.
+Layout PBGEN Generate support posts for every deck in the drawing, at each deck shape&#39;s own post positions from the component library (square-deck corners when the library has no data for a shape). Posts closer than one inch merge into a single shared post, posts carry real catalog part numbers for their heights, and re-running after moving decks regenerates the posts from their current positions.
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="/user/index.html">
+	<meta property="og:site_name" content="Playcraft Suite">
+	<meta property="og:title" content="User Guide">
+	<meta property="og:description" content="User Guide: the feature catalog# Every Playcraft command available in AutoCAD 2027, grouped by task. Type the command name at the AutoCAD command line, or use the Playcraft palette.
+Layout PBGEN Generate support posts for every deck in the drawing, at each deck shape&#39;s own post positions from the component library (square-deck corners when the library has no data for a shape). Posts closer than one inch merge into a single shared post, posts carry real catalog part numbers for their heights, and re-running after moving decks regenerates the posts from their current positions.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="website">
+
+
+	<meta itemprop="name" content="User Guide">
+	<meta itemprop="description" content="User Guide: the feature catalog# Every Playcraft command available in AutoCAD 2027, grouped by task. Type the command name at the AutoCAD command line, or use the Playcraft palette.
+Layout PBGEN Generate support posts for every deck in the drawing, at each deck shape&#39;s own post positions from the component library (square-deck corners when the library has no data for a shape). Posts closer than one inch merge into a single shared post, posts carry real catalog part numbers for their heights, and re-running after moving decks regenerates the posts from their current positions.">
+	<meta itemprop="wordCount" content="2580">
+
+<title>User Guide • Playcraft Suite</title>
+<link rel="icon" href="../favicon.png" >
+<link rel="manifest" href="../manifest.json">
+<link rel="canonical" href="../user/index.html">
+<link rel="stylesheet" href="../book.min.683429ca61d86ac58205918e8a59ec4b94d2f27cb90f702359eb41c485926af9.css" >
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-section book-type-user">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="../index.html"><span>Playcraft Suite</span>
+  </a>
+</h2>
+
+
+
+
+
+<nav class="pc-tabs">
+  <a href="../user/index.html">🛝 User Guide</a>
+  <a href="../dev/index.html">🧰 Developer</a>
+  <a href="../api/index.html">📖 API</a>
+</nav>
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../user/index.html" class="active">
+      User Guide</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../user/quickstart.html" class="">
+      Quick Start</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../dev/index.html" class="">
+      Developer Guide</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../dev/adding-a-feature.html" class="">
+      Adding a feature</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../dev/api-reference.html" class="">
+      API reference (Playcraft.Core)</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="../icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>User Guide</h3>
+
+  <label for="toc-control">
+    
+    <img src="../icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="user-guide-the-feature-catalog">User Guide: the feature catalog<a class="anchor" href="#user-guide-the-feature-catalog">#</a></h1>
+<p>Every Playcraft command available in AutoCAD 2027, grouped by task. Type the
+command name at the AutoCAD command line, or use the Playcraft palette.</p>
+<!-- The catalog below is GENERATED from data/features.json, the same single
+     source of truth the plugin palette reads. To add or change an entry, edit
+     that file (never this page) and rebuild the docs. -->
+
+<h2 id="layout">Layout</h2>
+<article class="pc-feature">
+  <h3 id="pbgen"><code>PBGEN</code></h3>
+  <p>Generate support posts for every deck in the drawing, at each deck shape&#39;s own post positions from the component library (square-deck corners when the library has no data for a shape). Posts closer than one inch merge into a single shared post, posts carry real catalog part numbers for their heights, and re-running after moving decks regenerates the posts from their current positions.</p>
+  <p class="pc-meta">Added in version 0.1.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbfill"><code>PBFILL</code></h3>
+  <p>Automatically place the barrier fillers that close the vertical gap where decks of different heights meet on shared posts. Each height step gets the correct filler for its edge length from the component library, and re-running reconciles with the current layout: fillers are kept (including ones you swapped to an equivalent style), replaced, or removed as decks move, change height, or disappear. When imported decks arrive without real post data, it leaves their unmatched fillers in place and says how many, rather than erasing what it cannot verify.</p>
+  <p class="pc-meta">Added in version 0.5.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbheight"><code>PBHEIGHT</code></h3>
+  <p>Change a placed deck&#39;s height after the fact — click the deck (or press Enter for every deck) and give the new height. Heights step by 6 inches, run from 6 to 156 inches, and must sit inside the deck&#39;s own age ratings from the component library; a refused height says why and leaves the deck at the height it had. The deck&#39;s tag and visible height label update together, and when the drawing has generated posts the command reruns PBGEN and PBFILL itself, so posts restretch and step fillers swap to match the new step. Height edits on imported decks survive export back to the design file. Parts attached to the deck keep their own stamped height — re-place them if the new height changes what fits.</p>
+  <p class="pc-meta">Added in version 0.11.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbattach"><code>PBATTACH</code></h3>
+  <p>Attach the 24-inch wave slide at the deck mate point nearest your click — one click, no picking through the catalog (anything else places from the catalog palette or the placement loop). On decks the mate table knows, it snaps within 8 inches to the declared mate points, refuses incompatible pairs (R5 parts never mate to R35 decks), and skips points that already have a component on them; decks the table doesn&#39;t know snap to the nearest mate point drawn in their library file, and plain edge placement is the last resort when there is no mate data at all.</p>
+  <p class="pc-meta">Added in version 0.1.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbstamp"><code>PBSTAMP</code></h3>
+  <p>Place a catalog part into the drawing, picking as many points as you like until you press Enter or Escape. Usually you get here by double-clicking a part in the catalog palette, but you can also run it on its own and type a part number. Decks ask for their height first, and decks drawn from the library show it right on the deck. A ghost of the part follows your cursor and visibly snaps to the library&#39;s connection points — type Free to toggle the magnet off for a free-hand placement, and when a copy lands unsnapped the command says why, once per reason rather than once per click. While you drag, every connection point within four feet is drawn: green where the part could land, grey where something already sits, so a full deck edge and an empty one no longer look the same. The words ride the cursor and keep pace — naming the distance to the nearest free point, saying the ones in reach are taken, or that nothing placed accepts this part — and when the magnet holds a point it names what it holds, so at an edge two storeys share you can see which deck the part will serve. A part about to land unattached is marked in red before you click, not explained after. Decks join too: place a Tri-Deck against a square deck and they meet on the shared edge the catalog says they share, so posts merge and fillers resolve correctly. They stack as well: click inside a placed deck&#39;s footprint and the new deck lands exactly on that footprint as the next storey, corner posts merging into full-height tower posts — while a deck at the same height is refused, with the deck already holding that level named. Parts that cannot stand alone arrive with what they need: place a 36 inch slide and its sit-down wall comes with it, chosen for the rail system of the deck it landed on. Where the catalog offers a real choice — a sit-down wall or a hood, a themed half wall — you get a short numbered list once per rail system rather than once per click, and you can decline. Move a placed part afterwards and its carried companion moves with it; erase it and the companion goes too.</p>
+  <p class="pc-meta">Added in version 0.6.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbmates"><code>PBMATES</code></h3>
+  <p>Show every connection point in the drawing — green where nothing sits yet, grey where a component already occupies it — so you can see where anything could go without dragging a part around to find out. Run it again to hide them. The markers are drawn on top of the drawing rather than added to it: nothing to erase afterwards, nothing that plots or exports by accident, and no effect on the bill of materials. They are a snapshot of the moment you asked, so after moving or placing parts, run the command twice to refresh.</p>
+  <p class="pc-meta">Added in version 0.12.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pblevel"><code>PBLEVEL</code></h3>
+  <p>List the drawing&#39;s storeys: which level every component stands on, using exactly the numbering an export writes into the design file — components from an imported design keep the file&#39;s own hand-typed storey numbers, and parts placed natively derive theirs from the geometry (what stands on what, not raw height — a tall shade post is still ground-storey furniture). Optionally name a level to select everything on it, so a whole storey can be moved, inspected, or measured as one unit. Read-only: it never edits components, layers, or the file.</p>
+  <p class="pc-meta">Added in version 0.13.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbmigratez"><code>PBMIGRATEZ</code></h3>
+  <p>Lift an older flat drawing onto real elevations in one pass. Every component whose height label proves where it belongs moves to that height, attachments that ride a component follow their owner, and support posts stay at grade. Anything without evidence is left where it stands and named in the report — the command moves parts, never erases them, and never guesses. Running it again on a lifted drawing finds nothing to do, so it is safe to repeat.</p>
+  <p class="pc-meta">Added in version 0.13.0</p>
+</article>
+<h2 id="bill-of-materials">Bill of Materials</h2>
+<article class="pc-feature">
+  <h3 id="pbbom"><code>PBBOM</code></h3>
+  <p>Print the bill of materials for the drawing: every placed component tallied by part number with quantities and descriptions. Works fully offline: part tallies and descriptions come from data cached in the drawing, while collar and connection-hardware detail reads the component library. When a count is uncertain — chained collar art, parts without 3D collar data — it says so in a note instead of guessing silently. When the company parts database is configured, it also breaks every top-level part down into the smaller parts that make it up, following the chain as many levels deep as the data goes and multiplying quantities through each level. Sub-item rows it cannot read — an unreadable quantity, a link that loops back on itself — are counted conservatively and reported by name, never dropped in silence. Without that database connection the command prints the top-level bill exactly as before, still fully offline.</p>
+  <p class="pc-meta">Added in version 0.1.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbprice"><code>PBPRICE</code></h3>
+  <p>Print a priced bill of materials: unit MSRP plus extended MSRP and REP totals for the whole layout. With live pricing configured, MSRP is fetched fresh every run — never cached — in the background, so AutoCAD stays responsive while the catalog answers; without it, the built-in company price list keeps the numbers coming fully offline (REP prices always come from that list). The table names its price source and flags any part with no price on file rather than hiding it from the total.</p>
+  <p class="pc-meta">Added in version 0.1.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbpanel"><code>PBPANEL</code></h3>
+  <p>Toggle the live bill-of-materials palette. It shows the running parts list with MSRP and REP pricing, including support posts, collars, post caps, and connection hardware, and it updates itself after every edit: place, move, or erase a component and the counts and totals follow. Prices come from the live catalog when reachable, with a built-in price list keeping the palette working offline — an OFFLINE badge appears when live prices are unreachable (hover it to see the price source), and a Refresh Prices button re-checks on demand.</p>
+  <p class="pc-meta">Added in version 0.2.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbexportbom"><code>PBEXPORTBOM</code></h3>
+  <p>Save the priced bill of materials as a CSV file — the office document for sales, purchasing, and the factory. You choose where it lands (it suggests the drawing&#39;s name with -bom), and the file opens cleanly in Excel: the same structure sections, per-level rows, and MSRP and REP totals as PBPRICE, by construction, because both read the same tally and the same prices. The notes the command line prints — uncertain collar counts, parts with no price on file — ride along in the file&#39;s footer, so the saved file is as honest as the screen.</p>
+  <p class="pc-meta">Added in version 0.13.0</p>
+</article>
+<h2 id="catalog">Catalog</h2>
+<article class="pc-feature">
+  <h3 id="pbcatalog"><code>PBCATALOG</code></h3>
+  <p>Open the component catalog palette: browse the full library by family, search by name or part number, filter by age group or a price cap (priced from the built-in price list; parts with no listed price are counted in the status line), and double-click a part to place it. Hover a row to see the component&#39;s photo from the library, along with its full name — fetched only when you hover, so the list stays fast. Double-clicking hands the part to the placement loop: a ghost follows your cursor and snaps onto compatible mate points as you click copies in. Each placement is tagged, so the BOM, pricing, and design-file export pick it up automatically. Families the library inserts on its own (posts, fillers, caps) stay hidden, just like designers expect.</p>
+  <p class="pc-meta">Added in version 0.4.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbfit"><code>PBFIT</code></h3>
+  <p>Click a placed part and the catalog opens showing only what fits it. Compatibility comes from the library&#39;s own data: which families the part attaches to, matching rail systems, and the deck heights each part is rated for. Click a 48 inch deck and you get the climbers, slides, and panels that actually work at 48 inches.</p>
+  <p class="pc-meta">Added in version 0.4.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbkcdinfo"><code>PBKCDINFO</code></h3>
+  <p>Inspect a Playcraft designer project file (.kcd) without importing it: per-tab component counts, distinct support posts, attachment points, and fillers. The first step of bringing existing designs into AutoCAD.</p>
+  <p class="pc-meta">Added in version 0.3.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbimportkcd"><code>PBIMPORTKCD</code></h3>
+  <p>Import a Playcraft designer project (.kcd) into the drawing. Pick a design tab and every component is placed at its exact position and rotation, with real library geometry where available, engineering drawings as fallback, and labeled placeholders for anything unknown (without a component library configured, most parts land as placeholders). Re-importing the same tab replaces the earlier import instead of duplicating it, and the summary checks the file&#39;s declared post count against the imported geometry and flags any mismatch. It also checks the file&#39;s hand-typed storey numbers against the geometry — a deck filed on the wrong page, a tower collapsed onto one page, an attachment filed away from its owner — and reports what disagrees without changing anything, since the legacy app splits its texted top view into one page per storey and cannot run this check on itself.</p>
+  <p class="pc-meta">Added in version 0.3.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbexportkcd"><code>PBEXPORTKCD</code></h3>
+  <p>Export the drawing to a legacy design file (.kcd) — patch the design it came from, or author a brand-new design file when the layout was built from scratch in AutoCAD. The export always writes to a destination you choose (when patching, a fresh -export copy by default), so the original is never touched unless you point at it. Moved components are updated, components erased from an imported design are removed (as long as part of that import is still in the drawing), and components placed in AutoCAD are written in as new, with support posts shared correctly across neighboring decks. Attachments that ride along with a component — a slide and its sit-down wall — are exported with their pairing recorded: a full two-way link when the file gives the owner an attachment slot, the dependent&#39;s side alone otherwise, and the summary counts each. When patching, everything else in the original file (notes, pricing, locks, newer fields) passes through untouched. Also writes a modern .json copy of the design for web and API use.</p>
+  <p class="pc-meta">Added in version 0.3.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbdeps"><code>PBDEPS</code></h3>
+  <p>Check a design file for the attachments that ride along with a component: every slide paired with its sit-down wall or hood, every climber with its wall. It reports slides missing a required sit-down, attachments whose parent component is gone, links pointing at components the file no longer has, and pairs linked in one direction only — and when the design was imported here, it gives drawing positions for the flagged components it can locate. It needs the component library&#39;s catalog data and refuses to run without it, rather than print a falsely clean report. Reports only; it never edits components or the file.</p>
+  <p class="pc-meta">Added in version 0.6.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbvault"><code>PBVAULT</code></h3>
+  <p>Point the plugin at your component library — the folder whose family folders (Access Components, Decks, …) hold each component&#39;s drawings and data. It answers with what the plugin now sees: how many families and components, and whether the catalog and filler data files are present, so a wrong path reads as &#34;0 families&#34; right away instead of a mystery later. The choice is saved per user and announced every time the plugin loads; already-placed components keep their current look, and new placements read the new library. Scripted runs can still override the saved choice with an environment variable, and the command warns whenever that override is winning.</p>
+  <p class="pc-meta">Added in version 0.7.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbsetup"><code>PBSETUP</code></h3>
+  <p>Guided setup for a new machine. It opens by itself when the plugin loads and its library folder is missing on disk — an existing-but-empty folder gets a command-line note instead — and you can run it again any time. Browse to your library folder and the window reports what it finds — families, components, data files — before anything is saved, so a wrong folder is caught on the spot. Optionally paste the personal access token your administrator issued and press Test connection to confirm live pricing works right there. Choices are saved per user; there are no files to edit by hand.</p>
+  <p class="pc-meta">Added in version 0.8.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbsync"><code>PBSYNC</code></h3>
+  <p>Refresh the catalog data cached inside the drawing (names, descriptions, weights) from the Playcraft web catalog in one batched lookup that runs in the background, so AutoCAD stays responsive. The drawing keeps working offline between syncs.</p>
+  <p class="pc-meta">Added in version 0.1.0</p>
+</article>
+<h2 id="3d-view">3D View</h2>
+<article class="pc-feature">
+  <h3 id="pb3d"><code>PB3D</code></h3>
+  <p>Toggle the live 3D view palette. Every placed component renders as its real library 3D model — decks at their design height, posts stretched to their actual part height, slides and climbers at the deck they serve — and the picture follows every edit you make in the 2D plan. Drag to orbit, right- or middle-drag to pan, wheel to zoom — and clicking a part in 3D selects it in the drawing. Parts the library has no 3D model for show as orange boxes and are listed by part number, so nothing is ever silently missing.</p>
+  <p class="pc-meta">Added in version 0.10.0</p>
+</article>
+
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+<div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="../index.html" class="flex align-center">
+        <img src="../icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>Playcraft Suite</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="../user/quickstart.html" class="flex align-center">
+        <span>Quick Start</span>
+        <img src="../icons/forward.svg" class="book-icon" alt="Forward" />
+      </a>
+    
+    </span>
+  </div>
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents"></nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

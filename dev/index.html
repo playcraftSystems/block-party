@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Developer Guide# Architecture: the Core/Cad split# The AutoCAD managed API cannot run headless and needs a licensed AutoCAD, so the solution is built around one hard rule:
+┌────────────────────────────┐ ┌──────────────────────────────────┐ │ Playcraft.Core │ │ Playcraft.Plugin │ │ net10.0 - NO AutoCAD refs │◄─────│ net10.0-windows - AutoCAD.NET │ │ │ │ │ │ BOM tallying, features, │ │ [CommandMethod] shims, │ │ catalog parsing, geometry │ │ Transactions, SelectionFilter, │ │ math, pricing formatting │ │ XData tagging, palette UI │ └────────────────────────────┘ └──────────────────────────────────┘ ▲ fully unit-testable ▲ testable only with AutoCAD on any CI runner (self-hosted smoke tests) Playcraft.Core owns every rule that can be expressed without AutoCAD: BOM math (BomCalculator), the feature catalog (FeatureCatalog), catalog payload parsing, post-merge geometry, SVG parsing. It has zero AutoCAD references and must build on Linux. Playcraft.Plugin is a thin adapter: it collects data from the drawing (block references, XData tags), maps it into Core’s neutral types (PlacedComponent), calls Core, and writes results back to the drawing or command line. The litmus test: if a change you’re making to Playcraft.Plugin contains an if worth unit-testing, the logic belongs in Core. Define the data shape (or an interface) in Core and implement the AutoCAD side as an adapter. See how Commands.TallyBom feeds BomCalculator.Tally for the pattern.
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="/dev/index.html">
+	<meta property="og:site_name" content="Playcraft Suite">
+	<meta property="og:title" content="Developer Guide">
+	<meta property="og:description" content="Developer Guide# Architecture: the Core/Cad split# The AutoCAD managed API cannot run headless and needs a licensed AutoCAD, so the solution is built around one hard rule:
+┌────────────────────────────┐ ┌──────────────────────────────────┐ │ Playcraft.Core │ │ Playcraft.Plugin │ │ net10.0 - NO AutoCAD refs │◄─────│ net10.0-windows - AutoCAD.NET │ │ │ │ │ │ BOM tallying, features, │ │ [CommandMethod] shims, │ │ catalog parsing, geometry │ │ Transactions, SelectionFilter, │ │ math, pricing formatting │ │ XData tagging, palette UI │ └────────────────────────────┘ └──────────────────────────────────┘ ▲ fully unit-testable ▲ testable only with AutoCAD on any CI runner (self-hosted smoke tests) Playcraft.Core owns every rule that can be expressed without AutoCAD: BOM math (BomCalculator), the feature catalog (FeatureCatalog), catalog payload parsing, post-merge geometry, SVG parsing. It has zero AutoCAD references and must build on Linux. Playcraft.Plugin is a thin adapter: it collects data from the drawing (block references, XData tags), maps it into Core’s neutral types (PlacedComponent), calls Core, and writes results back to the drawing or command line. The litmus test: if a change you’re making to Playcraft.Plugin contains an if worth unit-testing, the logic belongs in Core. Define the data shape (or an interface) in Core and implement the AutoCAD side as an adapter. See how Commands.TallyBom feeds BomCalculator.Tally for the pattern.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="website">
+
+
+	<meta itemprop="name" content="Developer Guide">
+	<meta itemprop="description" content="Developer Guide# Architecture: the Core/Cad split# The AutoCAD managed API cannot run headless and needs a licensed AutoCAD, so the solution is built around one hard rule:
+┌────────────────────────────┐ ┌──────────────────────────────────┐ │ Playcraft.Core │ │ Playcraft.Plugin │ │ net10.0 - NO AutoCAD refs │◄─────│ net10.0-windows - AutoCAD.NET │ │ │ │ │ │ BOM tallying, features, │ │ [CommandMethod] shims, │ │ catalog parsing, geometry │ │ Transactions, SelectionFilter, │ │ math, pricing formatting │ │ XData tagging, palette UI │ └────────────────────────────┘ └──────────────────────────────────┘ ▲ fully unit-testable ▲ testable only with AutoCAD on any CI runner (self-hosted smoke tests) Playcraft.Core owns every rule that can be expressed without AutoCAD: BOM math (BomCalculator), the feature catalog (FeatureCatalog), catalog payload parsing, post-merge geometry, SVG parsing. It has zero AutoCAD references and must build on Linux. Playcraft.Plugin is a thin adapter: it collects data from the drawing (block references, XData tags), maps it into Core’s neutral types (PlacedComponent), calls Core, and writes results back to the drawing or command line. The litmus test: if a change you’re making to Playcraft.Plugin contains an if worth unit-testing, the logic belongs in Core. Define the data shape (or an interface) in Core and implement the AutoCAD side as an adapter. See how Commands.TallyBom feeds BomCalculator.Tally for the pattern.">
+	<meta itemprop="wordCount" content="761">
+
+<title>Developer Guide • Playcraft Suite</title>
+<link rel="icon" href="../favicon.png" >
+<link rel="manifest" href="../manifest.json">
+<link rel="canonical" href="../dev/index.html">
+<link rel="stylesheet" href="../book.min.683429ca61d86ac58205918e8a59ec4b94d2f27cb90f702359eb41c485926af9.css" >
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-section book-type-dev">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="../index.html"><span>Playcraft Suite</span>
+  </a>
+</h2>
+
+
+
+
+
+<nav class="pc-tabs">
+  <a href="../user/index.html">🛝 User Guide</a>
+  <a href="../dev/index.html">🧰 Developer</a>
+  <a href="../api/index.html">📖 API</a>
+</nav>
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../user/index.html" class="">
+      User Guide</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../user/quickstart.html" class="">
+      Quick Start</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../dev/index.html" class="active">
+      Developer Guide</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../dev/adding-a-feature.html" class="">
+      Adding a feature</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../dev/api-reference.html" class="">
+      API reference (Playcraft.Core)</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="../icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Developer Guide</h3>
+
+  <label for="toc-control">
+    
+    <img src="../icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#architecture-the-corecad-split">Architecture: the Core/Cad split</a></li>
+    <li><a href="#extension-points">Extension points</a></li>
+    <li><a href="#testing-model">Testing model</a></li>
+    <li><a href="#api-reference">API reference</a></li>
+    <li><a href="#doc-comments-are-public-so-write-accordingly">Doc comments are public, so write accordingly</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="developer-guide">Developer Guide<a class="anchor" href="#developer-guide">#</a></h1>
+<h2 id="architecture-the-corecad-split">Architecture: the Core/Cad split<a class="anchor" href="#architecture-the-corecad-split">#</a></h2>
+<p>The AutoCAD managed API cannot run headless and needs a licensed AutoCAD, so
+the solution is built around one hard rule:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>┌────────────────────────────┐      ┌──────────────────────────────────┐
+</span></span><span style="display:flex;"><span>│  Playcraft.Core            │      │  Playcraft.Plugin                │
+</span></span><span style="display:flex;"><span>│  net10.0 - NO AutoCAD refs │◄─────│  net10.0-windows - AutoCAD.NET   │
+</span></span><span style="display:flex;"><span>│                            │      │                                  │
+</span></span><span style="display:flex;"><span>│  BOM tallying, features,   │      │  [CommandMethod] shims,          │
+</span></span><span style="display:flex;"><span>│  catalog parsing, geometry │      │  Transactions, SelectionFilter,  │
+</span></span><span style="display:flex;"><span>│  math, pricing formatting  │      │  XData tagging, palette UI       │
+</span></span><span style="display:flex;"><span>└────────────────────────────┘      └──────────────────────────────────┘
+</span></span><span style="display:flex;"><span>        ▲ fully unit-testable                 ▲ testable only with AutoCAD
+</span></span><span style="display:flex;"><span>          on any CI runner                      (self-hosted smoke tests)</span></span></code></pre></div><ul>
+<li><strong><code>Playcraft.Core</code></strong> owns every rule that can be expressed without AutoCAD:
+BOM math (<code>BomCalculator</code>), the feature catalog (<code>FeatureCatalog</code>), catalog
+payload parsing, post-merge geometry, SVG parsing. It has <strong>zero</strong> AutoCAD
+references and must build on Linux.</li>
+<li><strong><code>Playcraft.Plugin</code></strong> is a thin adapter: it collects data from the drawing
+(block references, XData tags), maps it into Core&rsquo;s neutral types
+(<code>PlacedComponent</code>), calls Core, and writes results back to the drawing or
+command line.</li>
+</ul>
+<p><strong>The litmus test:</strong> if a change you&rsquo;re making to <code>Playcraft.Plugin</code> contains
+an <code>if</code> worth unit-testing, the logic belongs in Core. Define the data shape
+(or an interface) in Core and implement the AutoCAD side as an adapter. See
+how <code>Commands.TallyBom</code> feeds <code>BomCalculator.Tally</code> for the pattern.</p>
+<h2 id="extension-points">Extension points<a class="anchor" href="#extension-points">#</a></h2>
+<table>
+	<thead>
+			<tr>
+					<th>You want to…</th>
+					<th>Do this</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Add a command</td>
+					<td>New <code>[CommandMethod]</code> in <code>Playcraft.Plugin</code>, delegate logic to Core, add the command to <code>data/features.json</code></td>
+			</tr>
+			<tr>
+					<td>Add BOM behavior</td>
+					<td>Extend <code>BomCalculator</code> (+ tests) in Core; adapters only collect inputs</td>
+			</tr>
+			<tr>
+					<td>Consume a new catalog field</td>
+					<td>Extend <code>CatalogPart</code> in Core; the content hash automatically invalidates cached copies</td>
+			</tr>
+			<tr>
+					<td>Add UI</td>
+					<td>WPF/PaletteSet code lives in <code>Playcraft.Plugin</code>; ViewModels with testable logic go to Core</td>
+			</tr>
+	</tbody>
+</table>
+<p>The full walkthrough is on <a href="../dev/adding-a-feature.html">Adding a feature</a>.</p>
+<h2 id="testing-model">Testing model<a class="anchor" href="#testing-model">#</a></h2>
+<table>
+	<thead>
+			<tr>
+					<th>Suite</th>
+					<th>Needs</th>
+					<th>Where it runs</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>Playcraft.Core.Tests</code></td>
+					<td>nothing</td>
+					<td>everywhere (cloud CI gate, 80% line coverage on Core)</td>
+			</tr>
+			<tr>
+					<td><code>Playcraft.Plugin.SmokeTests</code> (<code>Category=RequiresAcad</code>)</td>
+					<td>AutoCAD 2027 installed</td>
+					<td>self-hosted runner / dev workstation</td>
+			</tr>
+			<tr>
+					<td><code>build/smoke-accoreconsole.ps1</code></td>
+					<td>AutoCAD 2027 installed</td>
+					<td>self-hosted runner; exercises real commands headless</td>
+			</tr>
+			<tr>
+					<td><code>build/golden-path.ps1</code></td>
+					<td>AutoCAD 2027 installed</td>
+					<td>self-hosted runner; the full designer job end to end, with a coverage gate over every <code>[CommandMethod]</code></td>
+			</tr>
+			<tr>
+					<td><code>build/drawing-regression.ps1</code></td>
+					<td>AutoCAD 2027 installed</td>
+					<td>self-hosted runner; the generation chain over seven real production designs, diffed against recorded baselines</td>
+			</tr>
+	</tbody>
+</table>
+<p>The golden path is the one that fails when you add a feature and forget to
+cover it. Its assertions are hand-written rather than a recorded transcript, on
+the grounds that a snapshot blesses whatever the code did last — every expected
+number carries a <code>Why</code> saying which rule produces it.</p>
+<p>The drawing regression is the deliberate exception, and the two do not conflict
+because they answer different questions. The golden path pins numbers a human
+reasoned about; the drawing regression asks &ldquo;did anything move that nobody
+mentioned?&rdquo; over designs of 40–90 components that nobody will ever assert by
+hand. It exists because of a defect neither the oracles nor the golden path can
+see: changing deck enumeration order moves a shared post by <em>less</em> than the 1.0&quot;
+merge tolerance, so no count changes and nothing goes red. Reversing enumeration
+leaves all 519 Core tests green and turns four of its scenarios red.</p>
+<p>What stops it becoming the thing the golden path warns about is that a baseline
+can only be rewritten by <code>-Accept</code>, which refuses without a <code>-Reason</code>. The
+reason, the commit and the component-library fingerprint are written into the
+baseline, so accepting a change shows up in <code>git diff</code> as a sentence someone had
+to write rather than a silent block of moved numbers. That is a social gate
+enforced by code review, not proof that anyone understood the diff — so read the
+reason, and disbelieve &ldquo;updated baselines&rdquo;.</p>
+<h2 id="api-reference">API reference<a class="anchor" href="#api-reference">#</a></h2>
+<p>The <a href="../dev/api-reference.html">Playcraft.Core API reference</a> is generated
+by DocFX from XML doc comments. The compiler enforces them (<code>CS1591</code> is an
+error), so the reference is always complete.</p>
+<h2 id="doc-comments-are-public-so-write-accordingly">Doc comments are public, so write accordingly<a class="anchor" href="#doc-comments-are-public-so-write-accordingly">#</a></h2>
+<p>This site (including the API reference) is published to the open internet.
+That gives comments a two-tier rule:</p>
+<ul>
+<li><strong><code>/// XML doc comments</code></strong> hold behavior, contracts, and usage. They are
+written for an outside reader and published verbatim by DocFX.</li>
+<li><strong><code>// regular comments</code></strong> hold internal endpoint paths, payload quirks,
+internal system names, and infrastructure notes. They never leave the repo.</li>
+</ul>
+<p>If you&rsquo;re documenting <em>how our systems work</em> rather than <em>what this API does</em>,
+it goes in a regular comment (see <code>CatalogPayload</code> in <code>Catalog.cs</code> for the
+pattern). The docs build enforces this: <code>docs/build-docs.ps1</code> scans every
+generated page against the deny-list in <code>docs/leak-patterns.txt</code> and fails on
+a match. When you introduce a new internal endpoint, config key, or system
+name, add a pattern for it in the same PR.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+<div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="../user/quickstart.html" class="flex align-center">
+        <img src="../icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>Quick Start</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="../dev/adding-a-feature.html" class="flex align-center">
+        <span>Adding a feature</span>
+        <img src="../icons/forward.svg" class="book-icon" alt="Forward" />
+      </a>
+    
+    </span>
+  </div>
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#architecture-the-corecad-split">Architecture: the Core/Cad split</a></li>
+    <li><a href="#extension-points">Extension points</a></li>
+    <li><a href="#testing-model">Testing model</a></li>
+    <li><a href="#api-reference">API reference</a></li>
+    <li><a href="#doc-comments-are-public-so-write-accordingly">Doc comments are public, so write accordingly</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,1853 @@
+{
+  "source_base_path": "/home/runner/work/PlaycraftSuite/PlaycraftSuite/docs/docfx",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.AgeFit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.AgeFit.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.AgeFit",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.AgeFit.yml\" sourcestartlinenumber=\"1\">One age band's suitability envelope for a catalog part: whether the part is\nappropriate for the band and, for elevated parts, the deck-height range it\nphysically fits (min = max = 0 means any height — the file's convention\nfor ground-mounted and height-independent parts).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.BomCalculator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.BomCalculator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.BomCalculator",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.BomCalculator.yml\" sourcestartlinenumber=\"1\">Pure BOM math. Descriptions come from the catalog cache when present,\nfalling back to built-in labels for unenriched parts — never the network.\nLives in Core so the tallying rules are unit-testable without AutoCAD; the\nCad layer's only job is collecting <xref href=\"Playcraft.Core.PlacedComponent\" data-throw-if-not-resolved=\"false\"></xref>s from the\ndrawing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.BomCsv.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.BomCsv.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.BomCsv",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.BomCsv.yml\" sourcestartlinenumber=\"1\">Composes the priced, sectioned, per-level BOM as CSV text — the office file\nfor sales, purchasing and the factory (execution plan Item 3). Pure text\ncomposition so the layout is unit-testable; the Cad layer owns the file\nwrite and its encoding (UTF-8 with BOM, so Excel detects it).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.BomCsvResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.BomCsvResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.BomCsvResult",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.BomCsvResult.yml\" sourcestartlinenumber=\"1\">What <xref href=\"Playcraft.Core.BomCsv.Compose(System.String%2cSystem.Collections.Generic.IReadOnlyList%7bPlaycraft.Core.BomSection%7d%2cPlaycraft.Core.PricedBomResult%2cPlaycraft.Core.PricedRow%2cSystem.String%2cSystem.Collections.Generic.IEnumerable%7bSystem.String%7d)\" data-throw-if-not-resolved=\"false\"></xref> produced: the file text plus the\ncounts of what it actually rendered, so the command's report can describe\nthe FILE rather than the flat tally it was built from (the same part at the\nsame level in two structures is one flat row but two data rows here).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.BomLine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.BomLine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.BomLine",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.BomLine.yml\" sourcestartlinenumber=\"1\">A bill-of-materials line: one distinct part with its quantity.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.BomSection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.BomSection.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.BomSection",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.BomSection.yml\" sourcestartlinenumber=\"1\">One section of a sectioned BOM: a play structure or a freestanding bucket,\nwith the lines belonging to it. A quote prints these in order so no component\nis orphaned from the structure it belongs to.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.Box3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.Box3.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.Box3",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.Box3.yml\" sourcestartlinenumber=\"1\">An axis-aligned 3D box in drawing inches. Deliberately free of AutoCAD and WPF types.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.BoxGrid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.BoxGrid.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.BoxGrid",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.BoxGrid.yml\" sourcestartlinenumber=\"1\">A uniform 2D hash grid over indexed boxes (bucketed by XY footprint; Z is\nchecked in the exact intersection test). Same contract as\n<xref href=\"Playcraft.Core.PointGrid\" data-throw-if-not-resolved=\"false\"></xref>: the grid narrows candidates, and every match\nre-runs the exact <xref href=\"Playcraft.Core.Box3.Intersects(Playcraft.Core.Box3)\" data-throw-if-not-resolved=\"false\"></xref> predicate — including its\nclosed-interval touching-faces semantics — so results match a full O(n²)\nscan bit-for-bit.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.CatalogFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.CatalogFilter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.CatalogFilter",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.CatalogFilter.yml\" sourcestartlinenumber=\"1\">Catalog compatibility rules, straight from the catalog file's own data:\nwhich parts fit a clicked host (MatesWith family + system type + the age\nenvelopes' deck-height range) and which suit an age band.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.CatalogFit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.CatalogFit.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.CatalogFit",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.CatalogFit.yml\" sourcestartlinenumber=\"1\">A &quot;show me what fits this&quot; context: the placed component a designer\nclicked, reduced to the three facts compatibility depends on.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.CatalogLookup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.CatalogLookup.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.CatalogLookup",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.CatalogLookup.yml\" sourcestartlinenumber=\"1\">One lookup response: cacheable parts, volatile prices, and misses.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.CatalogPart.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.CatalogPart.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.CatalogPart",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.CatalogPart.yml\" sourcestartlinenumber=\"1\">Catalog metadata for one part as returned by the catalog service —\neverything EXCEPT price. Price is volatile and is deliberately never cached\ninto drawings; these fields are stable identity data that make a drawing\nself-describing offline.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.CatalogPayload.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.CatalogPayload.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.CatalogPayload",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.CatalogPayload.yml\" sourcestartlinenumber=\"1\">Parses catalog lookup responses into <xref href=\"Playcraft.Core.CatalogLookup\" data-throw-if-not-resolved=\"false\"></xref> values,\ntolerating shape quirks in the feed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.CollarCounter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.CollarCounter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.CollarCounter",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.CollarCounter.yml\" sourcestartlinenumber=\"1\">Collar counting. A collar is a physical clamp on a post; the component\nlibrary models them as named meshes in each component's 3D art, so the count\nis derived from mesh bounding boxes: where two components share a post their\ncollar boxes coincide and merge into one physical collar.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.ComponentLibrary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.ComponentLibrary.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.ComponentLibrary",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.ComponentLibrary.yml\" sourcestartlinenumber=\"1\">The component catalog parsed from the library's ComponentData.xml: every\nentry, plus the library's own rule for which families are browsable. The\nfile marks auto-inserted families (posts, fillers, caps) as omitted from\nthe library tree; the browsable view honors that so designers see exactly\nthe parts they are meant to place by hand.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.ComponentTypes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.ComponentTypes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.ComponentTypes",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.ComponentTypes.yml\" sourcestartlinenumber=\"1\">The component TYPE tags written into each placed component's identity tag.\nDomain vocabulary shared by the Cad layer (which stores them as XData) and\nthe BOM math here — the strings themselves are drawing data, so they must\nnever change once drawings exist.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.DeckHeightCheck.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.DeckHeightCheck.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.DeckHeightCheck",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.DeckHeightCheck.yml\" sourcestartlinenumber=\"1\">The verdict on a requested deck height, with the part's rated\nbounds so a refusal message can say what WOULD be accepted.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.DeckHeightRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.DeckHeightRule.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.DeckHeightRule",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.DeckHeightRule.yml\" sourcestartlinenumber=\"1\">The deck-height editing rule shared by every entry point that accepts a\nheight (PBHEIGHT, PBSTAMP's prompt, the KCD importer's warning): heights\nlive on the catalog's 6&quot; grid, inside the 6&quot; to 156&quot; editing range, under\nthe 108&quot; cap for surface-mount decks, and inside the part's own age\nenvelopes. A height that breaks a rule is refused with a named reason,\nnever silently rewritten. The envelope semantic is\n<xref href=\"Playcraft.Core.HeightResolver.FitsHostHeight(System.Collections.Generic.IReadOnlyList%7bPlaycraft.Core.AgeFit%7d%2cSystem.Nullable%7bSystem.Double%7d)\" data-throw-if-not-resolved=\"false\"></xref>'s: any appropriate band covers\nthe height, 0/0 means any, and missing data never blocks, so the editing\nrule and the catalog fit filter can never disagree.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.DeckHeightVerdict.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.DeckHeightVerdict.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.DeckHeightVerdict",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.DeckHeightVerdict.yml\" sourcestartlinenumber=\"1\">Which rule refused a requested deck height, or <xref href=\"Playcraft.Core.DeckHeightVerdict.Ok\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.DeckToDeck.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.DeckToDeck.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.DeckToDeck",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.DeckToDeck.yml\" sourcestartlinenumber=\"1\">Deck-to-deck attachment counting for the HS-1100-2 hardware line.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.DependencyBinding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.DependencyBinding.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.DependencyBinding",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.DependencyBinding.yml\" sourcestartlinenumber=\"1\">One resolved owner→dependent pairing in a design: which placed slide carries\nwhich placed sit-down wall/hood (or, generally, which owner carries which\ndependent), and how the two are linked.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.DependencyCatalog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.DependencyCatalog.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.DependencyCatalog",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.DependencyCatalog.yml\" sourcestartlinenumber=\"1\">The owner→dependent auto-carry rule table, built from the component catalog's\nown <xref href=\"Playcraft.Core.LibraryEntry.AllowedAttachments\" data-throw-if-not-resolved=\"false\"></xref> declarations. An OWNER\n(a slide, a climber) names the dependent Categories it carries; a DEPENDENT\n(a sit-down wall/hood, a half/transition wall) carries the matching\n<xref href=\"Playcraft.Core.LibraryEntry.Category\" data-throw-if-not-resolved=\"false\"></xref>. This catalog resolves a placed\ncomponent — keyed the way a design file names it, FileName then PartNumber —\nto those facts so <xref href=\"Playcraft.Core.DependencyPlanner\" data-throw-if-not-resolved=\"false\"></xref> can pair owners with the\ndependents they auto-carry.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.DependencyFinding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.DependencyFinding.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.DependencyFinding",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.DependencyFinding.yml\" sourcestartlinenumber=\"1\">One thing wrong with a design's dependency graph.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.DependencyIssue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.DependencyIssue.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.DependencyIssue",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.DependencyIssue.yml\" sourcestartlinenumber=\"1\">The kind of dependency issue <xref href=\"Playcraft.Core.DependencyPlanner\" data-throw-if-not-resolved=\"false\"></xref> reports.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.DependencyPlan.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.DependencyPlan.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.DependencyPlan",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.DependencyPlan.yml\" sourcestartlinenumber=\"1\">The complete dependency picture for a design: every resolved owner→dependent\nbinding, plus every issue (missing, broken, orphaned, inconsistent). A\ncommand reconciles a drawing against it, and a MOVE/DELETE of an owner reads\n<xref href=\"Playcraft.Core.DependencyPlan.DependentIdsOf(System.String)\" data-throw-if-not-resolved=\"false\"></xref> to carry its dependents.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.DependencyPlanner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.DependencyPlanner.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.DependencyPlanner",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.DependencyPlanner.yml\" sourcestartlinenumber=\"1\">The dependency pass over a whole design: pairs every owner (slide, climber)\nwith the dependents it auto-carries (sit-down wall/hood, half/transition\nwall) and reports the graph's gaps. Pure and vault-independent — the drawing\nanalogue of <xref href=\"Playcraft.Core.FillerPlanner\" data-throw-if-not-resolved=\"false\"></xref>, but driven by the design file's own\nattachment links rather than deck geometry.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.DependencyTally.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.DependencyTally.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.DependencyTally",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.DependencyTally.yml\" sourcestartlinenumber=\"1\">The headline numbers of a <xref href=\"Playcraft.Core.DependencyPlan\" data-throw-if-not-resolved=\"false\"></xref>, counted once so a\nreporting command never has to derive them (and never double-counts a single\ndrifted pair, which both <xref href=\"Playcraft.Core.DependencyIssue.InconsistentLink\" data-throw-if-not-resolved=\"false\"></xref>\nemitters would otherwise invite: Pass 1 anchors the finding on the dependent,\nPass 2 on the owner, but each still describes exactly one binding).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.DependentChoice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.DependentChoice.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.DependentChoice",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.DependentChoice.yml\" sourcestartlinenumber=\"1\">The catalog parts an owner could carry, and whether the choice is the\ndesigner's to make. Placement asks this before it asks the designer: a slide\nwhose sit-down wall is determined needs no prompt, a climber with four\nthemed half walls does.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.DependentSelector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.DependentSelector.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.DependentSelector",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.DependentSelector.yml\" sourcestartlinenumber=\"1\">Which catalog parts satisfy an owner's <xref href=\"Playcraft.Core.LibraryEntry.AllowedAttachments\" data-throw-if-not-resolved=\"false\"></xref>\nfor a given structure. The rule table (<xref href=\"Playcraft.Core.DependencyCatalog\" data-throw-if-not-resolved=\"false\"></xref>) says\nWHAT categories an owner carries; this says WHICH parts can fill them here,\nwhich is what a placement command needs before it can carry anything.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.EnvFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.EnvFile.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.EnvFile",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.EnvFile.yml\" sourcestartlinenumber=\"1\">Line-level editing for the suite's per-user settings files: plain text,\none <code>KEY=&quot;value&quot;</code> per line, <code>#</code> comments. Editing works on lines\nrather than a parsed model on purpose — a settings file may hold keys and\ncomments this code has never heard of, and a save must let them all\nthrough untouched.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.FeatureCatalog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.FeatureCatalog.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.FeatureCatalog",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.FeatureCatalog.yml\" sourcestartlinenumber=\"1\">Strict loader for <code>data/features.json</code>. Anything the schema forbids —\nmissing fields, malformed command names, duplicate commands — throws\n<xref href=\"System.FormatException\" data-throw-if-not-resolved=\"false\"></xref> rather than degrading silently, because two\nconsumers (palette and docs) would otherwise drift apart in different ways.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.FeatureDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.FeatureDefinition.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.FeatureDefinition",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.FeatureDefinition.yml\" sourcestartlinenumber=\"1\">One user-facing plugin feature as declared in <code>data/features.json</code> — the\nsingle source of truth consumed by BOTH the AutoCAD palette and the\ndocumentation site's End-User tab. Mirrors <code>data/features.schema.json</code>.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.FillerAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.FillerAction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.FillerAction",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.FillerAction.yml\" sourcestartlinenumber=\"1\">What to do about the filler at one shared mate point.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.FillerCatalog.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.FillerCatalog.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.FillerCatalog",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.FillerCatalog.yml\" sourcestartlinenumber=\"1\">The filler catalog parsed from the library's FillerData.xml: the per-system\ndimension tables the selection rule searches, the swap groups behind the\n&quot;swap filler&quot; UI, and the global 6-inch-gap flag.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.FillerDecision.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.FillerDecision.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.FillerDecision",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.FillerDecision.yml\" sourcestartlinenumber=\"1\">The resolved filler action for one shared mate point.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.FillerDeck.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.FillerDeck.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.FillerDeck",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.FillerDeck.yml\" sourcestartlinenumber=\"1\">One deck-like component as the filler pass sees it, all geometry\nin world drawing coordinates (Y up, inches).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.FillerEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.FillerEntry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.FillerEntry",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.FillerEntry.yml\" sourcestartlinenumber=\"1\">One filler part's dimension entry from the library's FillerData.xml.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.FillerMatePoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.FillerMatePoint.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.FillerMatePoint",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.FillerMatePoint.yml\" sourcestartlinenumber=\"1\">A deck mate point in world drawing coordinates.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.FillerPlacement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.FillerPlacement.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.FillerPlacement",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.FillerPlacement.yml\" sourcestartlinenumber=\"1\">One filler the plan wants standing in the drawing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.FillerPlan.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.FillerPlan.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.FillerPlan",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.FillerPlan.yml\" sourcestartlinenumber=\"1\">The complete filler plan for a drawing: where fillers belong and where any\nexisting filler must go away (flush joints and suppressed 6&quot; steps).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.FillerPlanner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.FillerPlanner.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.FillerPlanner",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.FillerPlanner.yml\" sourcestartlinenumber=\"1\">The filler pass over a whole drawing: pairs the deck-like components the\nlegacy way (shared posts + coincident mate points) and folds the per-point\ndecisions of <xref href=\"Playcraft.Core.FillerSelector.DecideAtMatePoint(Playcraft.Core.FillerCatalog%2cSystem.String%2cSystem.Int32%2cPlaycraft.Core.MateLengthClass)\" data-throw-if-not-resolved=\"false\"></xref> into one\nposition-keyed plan a command can reconcile the drawing against.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.FillerSelector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.FillerSelector.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.FillerSelector",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.FillerSelector.yml\" sourcestartlinenumber=\"1\">Filler auto-selection: the legacy engine's exact lookup and trigger rules,\nported as pure functions (see docs/pd-parity.md). A filler is a vertical\nspacer bridging the height step where two mated decks of different\nDesignHeights meet on shared posts — one per shared mate point per\nheight-differing deck pair. It is NOT emitted on open perimeter edges.\nThe legacy trigger pairs decks hanging off a common post that share at\nleast two posts and coincident mate points, then decides per shared mate\npoint as <xref href=\"Playcraft.Core.FillerSelector.DecideAtMatePoint(Playcraft.Core.FillerCatalog%2cSystem.String%2cSystem.Int32%2cPlaycraft.Core.MateLengthClass)\" data-throw-if-not-resolved=\"false\"></xref> does.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.FootprintStackRule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.FootprintStackRule.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.FootprintStackRule",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.FootprintStackRule.yml\" sourcestartlinenumber=\"1\">The stacking half of the magnet: a deck clicked ON another deck's footprint\nis born at that deck's exact plan position instead of at the raw pick, so a\ntower can be dragged instead of typed.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.FreestandingSections.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.FreestandingSections.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.FreestandingSections",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.FreestandingSections.yml\" sourcestartlinenumber=\"1\">Quote sections for components a designer left outside every group. The bucket\nnames come from the component library's own family vocabulary, which the\nbundled price list repeats verbatim, so they resolve with no vault and no\nnetwork.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.HardwareCalculator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.HardwareCalculator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.HardwareCalculator",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.HardwareCalculator.yml\" sourcestartlinenumber=\"1\">Builds the counted-hardware BOM lines from design tallies.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.HardwareRules.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.HardwareRules.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.HardwareRules",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.HardwareRules.yml\" sourcestartlinenumber=\"1\">Counted-hardware rules: the BOM lines that are tallies of the design rather\nthan placed components — collars, post caps, deck-to-deck hardware, and the\nprice-banded extra-hardware allowance. Part numbers and system-type mappings\nare ports of the legacy BOM output rules, verified against the current price\nlist.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.HeightLabel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.HeightLabel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.HeightLabel",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.HeightLabel.yml\" sourcestartlinenumber=\"1\">The height attribute's value format — the one string that is BOTH the\ndesigner-visible label and the canonical stored height (ADR §4.4a: the\nattribute owns height, there is no second copy). Because storage and\ndisplay are the same string, <xref href=\"Playcraft.Core.HeightLabel.Format(System.Double)\" data-throw-if-not-resolved=\"false\"></xref> must round-trip every\nheight the suite handles: &quot;0.####&quot; keeps a hand-edited 40.25&quot; exact where\nthe old display-only &quot;0.#&quot; would have stored it back as 40.3&quot;.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.HeightResolver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.HeightResolver.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.HeightResolver",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.HeightResolver.yml\" sourcestartlinenumber=\"1\">Height resolution for placement flows (F-032): what height metadata a\nplacement should carry, and whether a part is rated for the host height it\nsnapped to. Pure functions over catalog data, shared by the magnetic\nplacement jig and the catalog fit filter so the two can never disagree\nabout what &quot;fits at this height&quot; means.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.KcdAttachmentPoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.KcdAttachmentPoint.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.KcdAttachmentPoint",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.KcdAttachmentPoint.yml\" sourcestartlinenumber=\"1\">One attachment point of a component in a legacy design file. In the file\nthese are FLAT repeatable &lt;AttachmentPoints&gt; elements with the fields\nas direct children — there is no per-point wrapper element.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.KcdComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.KcdComponent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.KcdComponent",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.KcdComponent.yml\" sourcestartlinenumber=\"1\">One placed component in a legacy design file.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.KcdComponentAddition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.KcdComponentAddition.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.KcdComponentAddition",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.KcdComponentAddition.yml\" sourcestartlinenumber=\"1\">A component that exists in the drawing but not in the design file — placed\nwith the suite's own commands — to be written into the exported tab.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.KcdComponentUpdate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.KcdComponentUpdate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.KcdComponentUpdate",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.KcdComponentUpdate.yml\" sourcestartlinenumber=\"1\">One component's placement as it now stands in the drawing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.KcdDesign.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.KcdDesign.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.KcdDesign",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.KcdDesign.yml\" sourcestartlinenumber=\"1\">A legacy design file parsed into a pure model.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.KcdDesignTab.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.KcdDesignTab.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.KcdDesignTab",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.KcdDesignTab.yml\" sourcestartlinenumber=\"1\">One design tab (structure) in a legacy design file.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.KcdJson.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.KcdJson.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.KcdJson",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.KcdJson.yml\" sourcestartlinenumber=\"1\">The modern wire format for a design (F-030 companion): a versioned,\ncamelCase, UTF-8 JSON document with real numbers and booleans, explicit\nunits (including the legacy feet/inches per-container quirk, spelled out\nper slot), ISO 8601 timestamps, and stable field order. Content-complete\nagainst the parsed model — RenderTransform rides along verbatim — so the\n.kcd stays the backwards-compatible interchange while anything modern\nconsumes this instead of XML.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.KcdJsonMeta.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.KcdJsonMeta.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.KcdJsonMeta",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.KcdJsonMeta.yml\" sourcestartlinenumber=\"1\">Provenance stamped into a JSON export.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.KcdLayerAudit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.KcdLayerAudit.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.KcdLayerAudit",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.KcdLayerAudit.yml\" sourcestartlinenumber=\"1\">Layer-vs-geometry disagreement report for an imported design file\n(ADR §4.4c's deferred import half). The legacy app cannot run this check\non itself — a 2D canvas has no answer to &quot;what stands on what&quot; — so the\ndesigner's hand-typed tiers go unexamined until the texted top view\nsplits into unreadable pages. The suite derives the storeys and can say\nwhere the file's own numbers contradict them.</p>\n<p sourcefile=\"api/Playcraft.Core.KcdLayerAudit.yml\" sourcestartlinenumber=\"8\">This is a REPORT, never a correction: adoption of the file's numbering —\nincluding a privately inverted one — is the §4.4c rule, so the audit\ncompares the PARTITION, not the labels. A walkable band wholly labeled 3\nis consistent; a band split between two labels is not. On the reference\ncorpus (11 files, 113 decks) the checks flag nothing, so a finding on a\nreal file is signal, not noise.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.KcdLayerAuditResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.KcdLayerAuditResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.KcdLayerAuditResult",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.KcdLayerAuditResult.yml\" sourcestartlinenumber=\"1\">What <xref href=\"Playcraft.Core.KcdLayerAudit.Of(System.Collections.Generic.IReadOnlyList%7bPlaycraft.Core.KcdComponent%7d%2cSystem.Func%7bPlaycraft.Core.KcdComponent%2cSystem.Boolean%7d)\" data-throw-if-not-resolved=\"false\"></xref> found in one design tab.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.KcdLayerDisagreement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.KcdLayerDisagreement.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.KcdLayerDisagreement",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.KcdLayerDisagreement.yml\" sourcestartlinenumber=\"1\">One place a design file's hand-typed Layer disagrees with its own\ngeometry. Kind is a stable machine word for tests and grouping; Detail is\nthe sentence a command prints.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.KcdLayers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.KcdLayers.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.KcdLayers",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.KcdLayers.yml\" sourcestartlinenumber=\"1\">Layer (storey/tier) assignment for components added to a design file\n(ADR §4.4c). The file's <code>&lt;Layer&gt;</code> integer is the legacy\ndesigner's hand-typed storey index — it filters the build in the Layer\nManager and splits the texted top-view PDF into one page per tier. The\nlegacy app cannot compute it (a 2D canvas has no answer to &quot;what stands\non what&quot;), so designers maintain it by hand; the suite can, so additions\nderive their tier and an existing component's Layer is treated as\ndesigner evidence that is never rewritten and never &quot;corrected&quot;.</p>\n<p sourcefile=\"api/Playcraft.Core.KcdLayers.yml\" sourcestartlinenumber=\"10\">Corpus-measured before writing (reference kcds, 9 multi-layer tabs, 128\ndeck placements): designer layers are clean non-interleaving height\nbands 9/9; the traversal tier below reproduces 102/128 hand assignments,\nand the misses are one file with privately inverted numbering (adoption\nkeeps it) and tiers reached only by climbing links (adoption inherits\nthem from the file's own bands). Height ALONE cannot draw the band\nline — the corpus holds a between-band gap equal to the largest\nwithin-band step (both 24&quot;) — which is why adjacency and footprint\ncoincidence participate.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.KcdLink.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.KcdLink.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.KcdLink",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.KcdLink.yml\" sourcestartlinenumber=\"1\">One owner→dependent pairing to write into a design file: a placed slide and\nthe sit-down wall it carries. Reconciling a link writes BOTH directions —\nthe owner's attachment slot (authoritative) and the dependent's back-reference\n— so the pair never lands in the one-way state <xref href=\"Playcraft.Core.DependencyIssue.InconsistentLink\" data-throw-if-not-resolved=\"false\"></xref>\nreports.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.KcdMatePoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.KcdMatePoint.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.KcdMatePoint",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.KcdMatePoint.yml\" sourcestartlinenumber=\"1\">One mate point of a component in a legacy design file.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.KcdNewFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.KcdNewFile.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.KcdNewFile",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.KcdNewFile.yml\" sourcestartlinenumber=\"1\">New-design skeleton for F-035: a complete, empty legacy design file that\n<xref href=\"Playcraft.Core.KcdWriter.ApplyPlacements(System.String%2cSystem.String%2cSystem.Collections.Generic.IReadOnlyList%7bPlaycraft.Core.KcdComponentUpdate%7d%2cSystem.Collections.Generic.IReadOnlyCollection%7bSystem.String%7d%2cSystem.Collections.Generic.IReadOnlyList%7bPlaycraft.Core.KcdComponentAddition%7d%2cSystem.Collections.Generic.IReadOnlyList%7bPlaycraft.Core.KcdLink%7d)\" data-throw-if-not-resolved=\"false\"></xref> can then pour components into — so\na from-scratch drawing exports through the exact corpus-pinned writer the\nread-modify-write path uses, never a second component serializer.</p>\n<p sourcefile=\"api/Playcraft.Core.KcdNewFile.yml\" sourcestartlinenumber=\"6\">The legacy app cannot be run here, so the envelope is deliberately a\ncompatibility superset of the available evidence (the corpus and the\nlegacy loader; citations in the source comments): the loader's hard\nrequirements, the newest corpus writer's shape, both underlay forms, a\ncomplete production color scheme (an incomplete one opens but blocks\nsaving in the legacy app), zeroed counts (the legacy app recomputes them\non open), and the legacy writer's own empty-thumbnail fallback.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.KcdNewPostSlot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.KcdNewPostSlot.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.KcdNewPostSlot",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.KcdNewPostSlot.yml\" sourcestartlinenumber=\"1\">A post slot of a component being added to a design file.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.KcdPlacement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.KcdPlacement.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.KcdPlacement",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.KcdPlacement.yml\" sourcestartlinenumber=\"1\">The design-canvas placement rule for legacy design files (F-029), verified\nagainst the demo/KCD corpus: slots on different components that share a\nPostID land on one world point under exactly this transform (sub-0.14&quot;\nagreement; see KcdPlacementTests).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.KcdPostIds.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.KcdPostIds.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.KcdPostIds",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.KcdPostIds.yml\" sourcestartlinenumber=\"1\">Post-identity assignment for components added to a design file. A slot's\nPostID is the file's identity for a physical post: slots on different\ncomponents sharing an id are one post, and the design's post count is the\nnumber of distinct ids. New slots therefore inherit the id of any post\nthey land on and mint fresh ids otherwise.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.KcdPostReconciliation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.KcdPostReconciliation.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.KcdPostReconciliation",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.KcdPostReconciliation.yml\" sourcestartlinenumber=\"1\">A design tab's post ids resolved against its own components. A slot's\nPostID has two meanings the legacy format never separates: most name a\nplaced component (an insertable, surface-mount or Revolution post — the\ncomponent IS the post), and the rest are abstract identities for posts\nthat exist only as shared bookkeeping between deck corners. Counting the\ntwo as one number is what made real designs look wrong: a file whose\nevery post is a placed component &quot;declares&quot; as many ids as it has post\ncomponents, and comparing that against a geometric slot merge measures\nnothing. This record separates them so each part can be judged by the\nrule that actually applies to it.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.KcdPostSlot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.KcdPostSlot.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.KcdPostSlot",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.KcdPostSlot.yml\" sourcestartlinenumber=\"1\">One post slot a component provides in a legacy design file.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.KcdReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.KcdReader.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.KcdReader",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.KcdReader.yml\" sourcestartlinenumber=\"1\">Reader for the legacy designer's project files (F-028). Parses the design\nstructure — tabs, component placements, posts, attachments, mates — into a\npure model; elements outside that structure are ignored (the exporter,\nF-030, will preserve them by read-modify-write on the original text).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.KcdWriteResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.KcdWriteResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.KcdWriteResult",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.KcdWriteResult.yml\" sourcestartlinenumber=\"1\">What <xref href=\"Playcraft.Core.KcdWriter.ApplyPlacements(System.String%2cSystem.String%2cSystem.Collections.Generic.IReadOnlyList%7bPlaycraft.Core.KcdComponentUpdate%7d%2cSystem.Collections.Generic.IReadOnlyCollection%7bSystem.String%7d%2cSystem.Collections.Generic.IReadOnlyList%7bPlaycraft.Core.KcdComponentAddition%7d%2cSystem.Collections.Generic.IReadOnlyList%7bPlaycraft.Core.KcdLink%7d)\" data-throw-if-not-resolved=\"false\"></xref> did.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.KcdWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.KcdWriter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.KcdWriter",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.KcdWriter.yml\" sourcestartlinenumber=\"1\">Exporter for legacy design files (F-030): read-modify-write with\npreservation, the pattern the production web platform proved\n(KcdModel::updateProjectProperties). Only the slice the drawing owns —\ncomponent placements and deletions in one tab — is touched; every other\nbyte, including unknown or newer elements (Flag, MeshColors, POV,\nDesignLock), passes through opaquely. Not byte-exact by design, but\ncomponents that didn't move keep their original text verbatim.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.LibraryEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.LibraryEntry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.LibraryEntry",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.LibraryEntry.yml\" sourcestartlinenumber=\"1\">One catalog entry a designer can browse and place.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.MateCandidateSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.MateCandidateSet.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.MateCandidateSet",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.MateCandidateSet.yml\" sourcestartlinenumber=\"1\">The shared candidate-set primitive behind every mate-point consumer — the\nclick path builds one per click, the F-032 jig builds one per jig start and\nqueries it per cursor sample, and the F-033 osnap overrule shares\n<xref href=\"Playcraft.Core.MateCandidateSet.WorldMatePoints(System.Collections.Generic.IReadOnlyList%7bPlaycraft.Core.MatePointRecord%7d%2cPlaycraft.Core.Transform2)\" data-throw-if-not-resolved=\"false\"></xref> for its per-entity variant. Precomputes every\ncomponent's world-space mate points and a <xref href=\"Playcraft.Core.PointGrid\" data-throw-if-not-resolved=\"false\"></xref> over the\noccupancy positions; <xref href=\"Playcraft.Core.MateCandidateSet.ForChild(Playcraft.Core.MatePointRecord)\" data-throw-if-not-resolved=\"false\"></xref> adds a per-child grid over the\ncompatible host points. The grids only narrow candidates: every returned\nmatch re-runs the exact per-host predicates of the original scan\n(<xref href=\"Playcraft.Core.MateMatcher.CompatiblePoints(System.Collections.Generic.IReadOnlyList%7bPlaycraft.Core.MatePointRecord%7d%2cSystem.String%2cSystem.String%2cSystem.String%2cSystem.String%2cSystem.String%2cPlaycraft.Core.MateRules)\" data-throw-if-not-resolved=\"false\"></xref> plus\n<xref href=\"Playcraft.Core.PointSnapper.Choose(System.Collections.Generic.IReadOnlyList%7bPlaycraft.Core.SnapPoint%7d%2cSystem.Collections.Generic.IReadOnlyList%7bPlaycraft.Core.Pt%7d%2cPlaycraft.Core.Pt%2cSystem.Double%2cSystem.Double)\" data-throw-if-not-resolved=\"false\"></xref>'s closed-interval distance rules), so\nanswers are bit-identical to <xref href=\"Playcraft.Core.MateCandidateSet.FindSnapReference(Playcraft.Core.MatePointRecord%2cPlaycraft.Core.Pt%2cSystem.Double%2cSystem.Double)\" data-throw-if-not-resolved=\"false\"></xref>, the retained\nO(n²) oracle — the differential tests hold this to account.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.MateComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.MateComponent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.MateComponent",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.MateComponent.yml\" sourcestartlinenumber=\"1\">One placed component as the mate search sees it: its catalog mate table,\nits world transform, and the two roles it can play — snap host (offering\nmate points to capture) and occupier (its own mates, or its insertion\npoint when it has none, mark nearby host points as taken). Posts play\nneither role: they live on corner slots, not mate points.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.MateHarvest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.MateHarvest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.MateHarvest",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.MateHarvest.yml\" sourcestartlinenumber=\"1\">Reads a component library's mate points straight off disk, so the plugin can\nuse the library the designer actually has instead of only the table baked in\nat build time (build/build-mate-table.ps1 produces the same rows from the\nsame files — MateHarvestEquivalenceTests holds the two to account).</p>\n<p sourcefile=\"api/Playcraft.Core.MateHarvest.yml\" sourcestartlinenumber=\"6\">This walks thousands of folders and must never run on a UI thread or inside\nan osnap/jig hot path (the F-033 rule); callers harvest once, off-thread, and\nswap the finished table in.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.MateHarvestResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.MateHarvestResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.MateHarvestResult",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.MateHarvestResult.yml\" sourcestartlinenumber=\"1\">What a harvest of a component library turned up: the mate rows, which\ncomponents were readable, and what went wrong — enough for the caller to\nreport the result honestly instead of silently shipping a partial table.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.MateLengthClass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.MateLengthClass.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.MateLengthClass",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.MateLengthClass.yml\" sourcestartlinenumber=\"1\">The edge-length class of a mate point, as the legacy engine's\nMatePoint.MatePointLength enum spells it (nOne = &quot;no filler on this edge&quot;).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.MateMarker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.MateMarker.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.MateMarker",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.MateMarker.yml\" sourcestartlinenumber=\"1\">One mate point rendered for a designer to look at: where it is, and whether\nsomething already sits on it.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.MateMatcher.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.MateMatcher.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.MateMatcher",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.MateMatcher.yml\" sourcestartlinenumber=\"1\">F-019 compatibility gate: which of a host's mate points a given child part\nmay legally take. Type pairing and family restrictions come from\n<xref href=\"Playcraft.Core.MateRules\" data-throw-if-not-resolved=\"false\"></xref>; the tri-deck / half-deck component exclusions apply\nonly when the host is one of the legacy engine's hard-coded special decks.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.MatePlacement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.MatePlacement.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.MatePlacement",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.MatePlacement.yml\" sourcestartlinenumber=\"1\">The placement math shared by every mate consumer: the exact insertion\npoint and rotation that land a child part's mate connector on a captured\nhost point with the mate vectors opposing.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.MatePointRecord.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.MatePointRecord.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.MatePointRecord",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.MatePointRecord.yml\" sourcestartlinenumber=\"1\">One mate point of a catalog part from the canonical mate table\n(data/mates/mate-points.csv, generated by build/build-mate-table.ps1).\nGeometry and type attributes both come from the library component XAML's\nMatePoints block — verified 1:1 against the engineering DWGs' mate marker\nblocks on every part the earlier DWG-join table covered.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.MateQueryResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.MateQueryResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.MateQueryResult",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.MateQueryResult.yml\" sourcestartlinenumber=\"1\">A mate search answer across every host in the drawing: the aggregate\noutcome plus, when snapped, the winning host and its captured point.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.MateRules.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.MateRules.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.MateRules",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.MateRules.yml\" sourcestartlinenumber=\"1\">Mate-type compatibility rules and component exclusion lists from the\nlibrary's rule file (data/mates/mate-rules.json, generated by\nbuild/build-mate-table.ps1 from MateTypeRules.xml). All lookups are\ncase-insensitive because the library's own labels are not consistently\ncased (e.g. &quot;default&quot;, &quot;Default&quot;, and &quot;DEFAULT&quot; all occur).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.MateSnapQuery.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.MateSnapQuery.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.MateSnapQuery",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.MateSnapQuery.yml\" sourcestartlinenumber=\"1\">A mate search bound to one child part. Construction resolves compatibility\nper host and indexes the compatible world points in a\n<xref href=\"Playcraft.Core.PointGrid\" data-throw-if-not-resolved=\"false\"></xref>; <xref href=\"Playcraft.Core.MateSnapQuery.Find(Playcraft.Core.Pt%2cSystem.Double%2cSystem.Double)\" data-throw-if-not-resolved=\"false\"></xref> then answers from the pick's\nneighborhood only, re-running the exact distance and occupancy predicates\nof the per-host scan so the answer matches\n<xref href=\"Playcraft.Core.MateCandidateSet.FindSnapReference(Playcraft.Core.MatePointRecord%2cPlaycraft.Core.Pt%2cSystem.Double%2cSystem.Double)\" data-throw-if-not-resolved=\"false\"></xref> bit-for-bit.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.MateTable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.MateTable.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.MateTable",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.MateTable.yml\" sourcestartlinenumber=\"1\">The canonical per-part mate table: every mate point of every component in\nthe library, keyed by part name (case-insensitive).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.PlacedComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.PlacedComponent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.PlacedComponent",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.PlacedComponent.yml\" sourcestartlinenumber=\"1\">One placed component as the BOM sees it: the identity-tag fields plus the\ncatalog display name when the drawing has one cached. This is the neutral\nshape the Cad layer maps AutoCAD block references into — Core never sees an\nAutoCAD type.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.Placement3D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.Placement3D.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.Placement3D",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.Placement3D.yml\" sourcestartlinenumber=\"1\">Where a component's 3D model sits in world space.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.PlannedPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.PlannedPost.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.PlannedPost",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.PlannedPost.yml\" sourcestartlinenumber=\"1\">A planned physical post: where it stands and the tallest deck it serves.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.PointGrid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.PointGrid.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.PointGrid",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.PointGrid.yml\" sourcestartlinenumber=\"1\">A uniform 2D hash grid over indexed points — the O(1)-per-query replacement\nfor &quot;scan every point&quot; proximity loops. Callers add points with their own\nindices and query for entries strictly within a tolerance, which is the\ncoincidence predicate every ported legacy rule uses (see\n<xref href=\"Playcraft.Core.PostMerge.PdTolerance\" data-throw-if-not-resolved=\"false\"></xref>). The grid only narrows the candidate\nset; every returned match re-checks the exact same\n<xref href=\"Playcraft.Core.Pt.DistanceTo(Playcraft.Core.Pt)\" data-throw-if-not-resolved=\"false\"></xref> comparison the O(n²) scans use, so results are\nbit-identical to a full scan — the differential tests in\n<code>Playcraft.Core.Tests</code> hold this to account.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.PointSnapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.PointSnapper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.PointSnapper",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.PointSnapper.yml\" sourcestartlinenumber=\"1\">F-019 capture rule: the nearest declared mate point within a Euclidean\nradius of the pick wins; points that already have a child sitting on them\nare skipped in the nearest-search. The radius replicates the legacy\nengine; the occupancy skip is the suite's own addition — see the constants.\nPure math — the plugin transforms points to world space and harvests\noccupied positions before calling in.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.PostFamilies.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.PostFamilies.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.PostFamilies",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.PostFamilies.yml\" sourcestartlinenumber=\"1\">Which catalog families ARE posts — parts that stand a vertical structural\npost in their own right when placed as a component. Production designs are\nbuilt this way: the 2026-08-04 corpus measurement found six of the seven\nharness design tabs resolve EVERY distinct PostID to a placed component in\none of these families (the seventh, R507312CA, resolves four of six), so a\ncomponent in a post family standing on a deck corner is that corner's post,\nand anything that counts or mints posts must treat it as one.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.PostMerge.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.PostMerge.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.PostMerge",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.PostMerge.yml\" sourcestartlinenumber=\"1\">Post-coincidence math: collapses deck corner slots into shared physical posts.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.PostNumberFormatter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.PostNumberFormatter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.PostNumberFormatter",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.PostNumberFormatter.yml\" sourcestartlinenumber=\"1\">Post part-number math. The catalog encodes a deck-height post as a whole-foot\nstock post factory-cut for that deck: <code>S-10{H:00}-{SYS}F-{N}-{deck:000}-{top:000}</code>\nwhere <code>top</code> is the post top above grade (deck height + 39&quot; rail for\nin-ground, + 3&quot; for surface mount), <code>H = ceil(top / 12)</code> is the stock\nlength in feet, and <code>N = H*12 - top</code> is the cut-down in inches. Surface\nmount appends <code>-SM</code>. Derived from and verified against the full price\nlist (every fractional post row follows this encoding exactly).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.PostPlanner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.PostPlanner.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.PostPlanner",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.PostPlanner.yml\" sourcestartlinenumber=\"1\">Height-aware post planning: merges deck corner slots into physical posts with\n<xref href=\"Playcraft.Core.PostMerge\" data-throw-if-not-resolved=\"false\"></xref>'s exact adopt-first coincidence rule, and gives each\npost the maximum height of the slots it absorbed — a shared post must serve\nits tallest deck.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.PostSlot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.PostSlot.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.PostSlot",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.PostSlot.yml\" sourcestartlinenumber=\"1\">A deck corner slot awaiting a post: its position and the deck height it serves.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.PostSpec.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.PostSpec.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.PostSpec",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.PostSpec.yml\" sourcestartlinenumber=\"1\">A resolved support post: full catalog part number plus its geometry facts.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.PriceBook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.PriceBook.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.PriceBook",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.PriceBook.yml\" sourcestartlinenumber=\"1\">The offline price list: part number → MSRP/REP prices, loaded from the\nbundled CSV export of the company price workbook. Lookup is\ncase-insensitive; duplicate part numbers keep the first row (the workbook\nlists one row per product NAME, so a part can appear several times at the\nsame price).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.PriceEntry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.PriceEntry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.PriceEntry",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.PriceEntry.yml\" sourcestartlinenumber=\"1\">One price-book entry: a part with its retail (MSRP) and discounted (REP) price.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.PricedBomBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.PricedBomBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.PricedBomBuilder",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.PricedBomBuilder.yml\" sourcestartlinenumber=\"1\">Applies prices to BOM lines and computes totals — the shared math behind the\npriced BOM command and the live BOM palette.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.PricedBomResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.PricedBomResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.PricedBomResult",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.PricedBomResult.yml\" sourcestartlinenumber=\"1\">A fully priced BOM: rows plus totals.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.PricedRow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.PricedRow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.PricedRow",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.PricedRow.yml\" sourcestartlinenumber=\"1\">One priced BOM row. Unit prices are null when no source priced the part.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.Pt.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.Pt.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.Pt",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.Pt.yml\" sourcestartlinenumber=\"1\">A 2D point in drawing inches. Deliberately free of AutoCAD types.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.QuoteSections.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.QuoteSections.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.QuoteSections",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.QuoteSections.yml\" sourcestartlinenumber=\"1\">The reserved section names and the rules for what belongs in a section.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.Scene3DPlacement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.Scene3DPlacement.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.Scene3DPlacement",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.Scene3DPlacement.yml\" sourcestartlinenumber=\"1\">The 2.5D→3D placement rule shared by the 3D view palette and any future 3D\nDWG export. World frame is AutoCAD's: X/Y the plan, Z up, inches. The\nlibrary's 3D models anchor their ORIGIN on the component's mount plane (a\ndeck's walking surface, an attachment's deck-edge mount, a post's base) —\nmeasured convention across the vault, validated by the collar math — so\nplacement is a plain translate, never bounding-box re-anchoring.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.SectionKind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.SectionKind.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.SectionKind",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.SectionKind.yml\" sourcestartlinenumber=\"1\">What KIND of thing a quote section is, which is what orders a quote. The kind\nis carried alongside the name rather than sniffed out of it: a section named\n&quot;Site Amenities&quot; could be a designer's group or a family roll-up, and only the\ncode that resolved it knows which.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.SnapOutcome.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.SnapOutcome.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.SnapOutcome",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.SnapOutcome.yml\" sourcestartlinenumber=\"1\">Why <xref href=\"Playcraft.Core.PointSnapper.Choose(System.Collections.Generic.IReadOnlyList%7bPlaycraft.Core.SnapPoint%7d%2cSystem.Collections.Generic.IReadOnlyList%7bPlaycraft.Core.Pt%7d%2cPlaycraft.Core.Pt%2cSystem.Double%2cSystem.Double)\" data-throw-if-not-resolved=\"false\"></xref> did or didn't capture.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.SnapPoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.SnapPoint.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.SnapPoint",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.SnapPoint.yml\" sourcestartlinenumber=\"1\">One mate point offered for capture, in world coordinates (the caller applies\nthe host's block transform before choosing).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.SnapResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.SnapResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.SnapResult",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.SnapResult.yml\" sourcestartlinenumber=\"1\">The capture decision: the outcome and, when snapped, the point.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.StackCandidate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.StackCandidate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.StackCandidate",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.StackCandidate.yml\" sourcestartlinenumber=\"1\">One placed deck as the stacking rule sees it: where its footprint stands,\nhow far that footprint reaches from the insertion point, and which storey it\nbelongs to.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.StackOutcome.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.StackOutcome.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.StackOutcome",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.StackOutcome.yml\" sourcestartlinenumber=\"1\">Why <xref href=\"Playcraft.Core.FootprintStackRule.Choose(System.Collections.Generic.IReadOnlyList%7bPlaycraft.Core.StackCandidate%7d%2cPlaycraft.Core.Pt%2cSystem.Double%2cSystem.Double)\" data-throw-if-not-resolved=\"false\"></xref> did or didn't stack.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.StackResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.StackResult.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.StackResult",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.StackResult.yml\" sourcestartlinenumber=\"1\">The stacking decision: the outcome, the deck it is about, and where the new\ndeck goes.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.StructureCheck.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.StructureCheck.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.StructureCheck",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.StructureCheck.yml\" sourcestartlinenumber=\"1\">What the drawing declares about its structures, checked against what the\ngeometry shows. Pure comparison: it reports, it never reassigns.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.StructureGrouper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.StructureGrouper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.StructureGrouper",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.StructureGrouper.yml\" sourcestartlinenumber=\"1\">Which decks form one physical play structure, computed from the same\nshared-post adjacency PBGEN and PBFILL already use.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.SubItemExploder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.SubItemExploder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.SubItemExploder",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.SubItemExploder.yml\" sourcestartlinenumber=\"1\">Explodes a tallied BOM into its sub-components by walking the parent → child\nlinks in <code>PartsSubItems</code>. Pure: the caller supplies the row lookup, so\nthe walk is unit-testable without a database and the Cad layer's only job is\nrunning one query per level.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.SubItemExplosion.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.SubItemExplosion.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.SubItemExplosion",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.SubItemExplosion.yml\" sourcestartlinenumber=\"1\">An explosion pass: the sub-component lines plus what the pass could not\ntrust. The notes exist because this data is hand-maintained — a silently\ndropped cycle or an unreadable quantity would turn into a short purchase\nlist, so callers report them rather than presenting a clean total.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.SubItemLine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.SubItemLine.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.SubItemLine",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.SubItemLine.yml\" sourcestartlinenumber=\"1\">One exploded sub-component: a part the drawing needs because a\ntop-level component contains it.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.SubItemRow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.SubItemRow.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.SubItemRow",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.SubItemRow.yml\" sourcestartlinenumber=\"1\">One <code>PartsSubItems</code> row as the explosion sees it. Every numeric column\nin that table is <code>nvarchar</code>, so the values arrive as raw text and are\nparsed here rather than at the database boundary — a price of &quot;&quot; or a\nquantity of &quot;AR&quot; is data the BOM has to survive, not an exception.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.Transform2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.Transform2.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.Transform2",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.Transform2.yml\" sourcestartlinenumber=\"1\">The XY part of a placed block's transform (rotation / mirror / scale plus\ntranslation) — the bridge from mate-table coordinates, which are local to a\npart's insertion point, to world coordinates. Kept in Core so every\nconsumer of mate positions (the click path, the F-032 jig, the F-033 osnap\noverrule) runs the identical transform math and can never disagree about\nwhere a mate point is.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.UnitPrices.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.UnitPrices.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.UnitPrices",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.UnitPrices.yml\" sourcestartlinenumber=\"1\">Unit prices for one part: retail and (when known) discounted.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.VaultComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.VaultComponent.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.VaultComponent",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.VaultComponent.yml\" sourcestartlinenumber=\"1\">A component parsed from a component-library 2D SVG. All coordinates are\nlocal to the component's insertion point with Y up (SVG is Y-down), in\ninches.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.VaultDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.VaultDescription.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.VaultDescription",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.VaultDescription.yml\" sourcestartlinenumber=\"1\">What a vault root turned out to contain, for reporting before trusting it.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.VaultInventory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.VaultInventory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.VaultInventory",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.VaultInventory.yml\" sourcestartlinenumber=\"1\">Inspects a component-library root without assuming which of the two known\nlayouts it is: the development tree keeps the family folders under\n<code>{root}\\library</code> with the data files at the root, while a designer\npointing PBVAULT at their own library usually names the family-folder level\ndirectly (…\\Access Components\\S0-1291\\…) with the data files at that\nlevel or one above. Everything here is inspection only — no caching, no\nAutoCAD — so the plugin can describe a path BEFORE committing to it.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.VaultMatePoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.VaultMatePoint.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.VaultMatePoint",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.VaultMatePoint.yml\" sourcestartlinenumber=\"1\">A component mate point: where another component attaches and which way it faces.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.VaultPolyline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.VaultPolyline.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.VaultPolyline",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.VaultPolyline.yml\" sourcestartlinenumber=\"1\">One connected polyline run: vertices with AutoCAD-style bulges\n(bulge[i] curves the segment from vertex i to i+1; tan(sweep/4)).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.VaultSvgParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.VaultSvgParser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.VaultSvgParser",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.VaultSvgParser.yml\" sourcestartlinenumber=\"1\">Minimal parser for the component library's machine-generated SVGs. They use\na constrained vocabulary: a JSON metadata block (insertion point, post\nslots, mate points) and path elements using only absolute M/L/A/Z commands.\nAnything outside that vocabulary throws — callers fall back to placeholder\ngeometry rather than render a wrong shape.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.VaultXamlParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.VaultXamlParser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.VaultXamlParser",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.VaultXamlParser.yml\" sourcestartlinenumber=\"1\">Parser for the component library's native 2D geometry files — the legacy\ndesigner's own <code>Component2D</code> XAML (&quot;{folder}.xaml&quot;), the format the\nrecovered library actually ships. It carries the same attachment metadata a\ndesign file's placed component does: the insertion point, the post slots,\nand the mate points (with their length class and mate-type). Produces the\nsame <xref href=\"Playcraft.Core.VaultComponent\" data-throw-if-not-resolved=\"false\"></xref> contract as <xref href=\"Playcraft.Core.VaultSvgParser\" data-throw-if-not-resolved=\"false\"></xref>,\nso every downstream consumer (block build, filler pairing, mate snap) is\nsource-agnostic.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.Xaml3DAssets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.Xaml3DAssets.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.Xaml3DAssets",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.Xaml3DAssets.yml\" sourcestartlinenumber=\"1\">Filename preference for the library's exported 3D models\n(&quot;{folder}-3D.xaml&quot;). Pure string work so the tolerance rules are testable:\nthe vault is hand-maintained and its known misnamings — a &quot;-3D2&quot; suffix, a\n&quot;-3D_NEW&quot; variant, two parts' files sharing one misfiled folder — must\nresolve to the right model instead of silently dropping the part.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.Xaml3DMeshes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.Xaml3DMeshes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core.Xaml3DMeshes",
+      "Summary": "<p sourcefile=\"api/Playcraft.Core.Xaml3DMeshes.yml\" sourcestartlinenumber=\"1\">Minimal reader for the component library's exported 3D XAML models. It\nextracts collar mesh bounding boxes — the input to\n<xref href=\"Playcraft.Core.CollarCounter\" data-throw-if-not-resolved=\"false\"></xref> — by scanning <code>MeshGeometry3D</code> resources\nwhose key starts with <code>Collar_</code> (case-insensitive across the library's\nold <code>COLLAR_</code> and current <code>Collar_</code> conventions; <code>CollarHW_</code>\nis hardware, not a collar, and never matches because of the underscore).\nPure text parsing — no WPF — so it runs and tests headlessly.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Playcraft.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Playcraft.Core.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Playcraft.Core",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
