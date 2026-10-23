@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Every feature, and why it is there# 31 commands. Type one at the AutoCAD command line.
+Each entry below says why the feature was built, then how to use it. The sections run in the order a designer meets them: set the library up, place parts, build the structure, look at it, count it, send it out, check it.
+New here? Read the Quick Start first. It installs the plugin and walks one small layout end to end.
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="/user/index.html">
+	<meta property="og:site_name" content="Playcraft Suite">
+	<meta property="og:title" content="User Guide">
+	<meta property="og:description" content="Every feature, and why it is there# 31 commands. Type one at the AutoCAD command line.
+Each entry below says why the feature was built, then how to use it. The sections run in the order a designer meets them: set the library up, place parts, build the structure, look at it, count it, send it out, check it.
+New here? Read the Quick Start first. It installs the plugin and walks one small layout end to end.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="website">
+
+
+	<meta itemprop="name" content="User Guide">
+	<meta itemprop="description" content="Every feature, and why it is there# 31 commands. Type one at the AutoCAD command line.
+Each entry below says why the feature was built, then how to use it. The sections run in the order a designer meets them: set the library up, place parts, build the structure, look at it, count it, send it out, check it.
+New here? Read the Quick Start first. It installs the plugin and walks one small layout end to end.">
+	<meta itemprop="wordCount" content="2741">
+
+<title>User Guide • Playcraft Suite</title>
+<link rel="icon" href="../favicon.png" >
+<link rel="manifest" href="../manifest.json">
+<link rel="canonical" href="../user/index.html">
+<link rel="stylesheet" href="../book.min.674885deb961fc8191ec9ca087df8ab71ee8ea57b447e6e33f5a92cc2bb8e86b.css" >
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-section book-type-user">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="../index.html"><span>Playcraft Suite</span>
+  </a>
+</h2>
+
+
+
+
+
+<nav class="pc-tabs">
+  <a href="../user/index.html">🛝 User Guide</a>
+  <a href="../dev/index.html">🧰 Developer</a>
+  <a href="../api/index.html">📖 API</a>
+</nav>
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../user/index.html" class="active">
+      User Guide</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../user/quickstart.html" class="">
+      Quick Start</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../dev/index.html" class="">
+      Developer Guide</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../dev/adding-a-feature.html" class="">
+      Adding a feature</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../dev/api-reference.html" class="">
+      API reference (Playcraft.Core)</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="../icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>User Guide</h3>
+
+  <label for="toc-control">
+    
+    <img src="../icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents"></nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="every-feature-and-why-it-is-there">Every feature, and why it is there<a class="anchor" href="#every-feature-and-why-it-is-there">#</a></h1>
+<p>31 commands. Type one at the AutoCAD command line.</p>
+<p>Each entry below says why the feature was built, then how to use it. The
+sections run in the order a designer meets them: set the library up, place
+parts, build the structure, look at it, count it, send it out, check it.</p>
+<p>New here? Read the <a href="quickstart">Quick Start</a> first. It installs the plugin and
+walks one small layout end to end.</p>
+<!-- The catalog below is GENERATED from data/features.json, the same single
+     source of truth the plugin palette reads. To add or change an entry, edit
+     that file (never this page) and rebuild the docs. -->
+
+<h2 id="setup">Setup</h2>
+<article class="pc-feature">
+  <h3 id="pbsetup"><code>PBSETUP</code></h3>
+  <p class="pc-what">Sets where the component library is and, optionally, your pricing token.</p>
+  <p>It opens by itself the first time if no library is set. Browse to the folder that holds the family folders (Access Components, Decks, and so on). The window shows what it found, such as 233 families, 6516 components; 0 families means the folder is wrong. Paste a pricing token if you have one and press Test connection, or leave it blank. Run PBSETUP again whenever either answer changes.</p>
+  <p class="pc-meta">Added in version 0.8.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbvault"><code>PBVAULT</code></h3>
+  <p class="pc-what">Sets the component library folder from the command line and reports what the plugin can see there.</p>
+  <p>Type the path. It prints how many families and components it found and which data files it found. The choice is saved per user and shown every time the plugin loads. Parts already placed keep their look; new placements read the new library. An environment-variable override wins over the saved path, and the command says when it does.</p>
+  <p class="pc-meta">Added in version 0.7.0</p>
+</article>
+<h2 id="place-parts">Place parts</h2>
+<article class="pc-feature">
+  <h3 id="pbcatalog"><code>PBCATALOG</code></h3>
+  <p class="pc-what">Opens the parts panel, where you search, filter and place components.</p>
+  <p>Search by name or part number. Dashes and case do not matter, so S-1101-R5 and s1101r5 find the same deck. Quote a phrase to keep it together, and put a minus in front of a word to leave it out. Filter by family or price, and click a column header to sort. Double-click a part to place it. The settings row at the top (Age, System, Mounting, Posts, Deck, Show, IPEMA only, Canada) sets what you place next and hides parts that do not fit; tick Show hidden parts to see them with the reason. Placed parts keep the settings they were placed with. To change placed parts, select them and click Apply the row to selection. Clear all resets the row, the search and the filters. One U takes back each click.</p>
+  <p class="pc-meta">Added in version 0.4.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbfit"><code>PBFIT</code></h3>
+  <p class="pc-what">Shows only the catalog parts that fit a part you have already placed.</p>
+  <p>Click a placed part. The catalog reopens holding only the parts that mate with it, match its rail system, and are rated for its height. Click a 48 inch deck and you get the climbers, slides and panels that work at 48 inches.</p>
+  <p class="pc-meta">Added in version 0.4.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbstamp"><code>PBSTAMP</code></h3>
+  <p class="pc-what">Places parts with a ghost that follows the cursor and snaps to connection points.</p>
+  <p>Pick a part and move the cursor. Nearby connection points show green when free and grey when taken. The words at the cursor say what the part will attach to, or why it cannot and where it could. A part about to land unattached turns red. While placing, type Next to attach by the other side, Angle to type an angle, Rotate or Counter to turn 15 degrees, Turn for half a turn, or Free to turn snapping off. Decks ask for their height first. Click inside a placed deck to stack the next storey on it. Click to place as many as you like, and press Enter to finish.</p>
+  <p class="pc-meta">Added in version 0.6.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbrot15"><code>PBROT15</code></h3>
+  <p class="pc-what">Turns the selected parts 15 degrees counter-clockwise.</p>
+  <p>Select parts and run it, or click the counter-clockwise turn button on the catalog palette. Each part turns about its own insertion point; a selection that holds a deck turns as one structure about its first deck. It is AutoCAD&#39;s own ROTATE underneath, so one U takes it back and posts and fillers follow as they do for any ROTATE. For any other angle, or to line a part up with a fence, use ROTATE itself.</p>
+  <p class="pc-meta">Added in version 0.16.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbrotback15"><code>PBROTBACK15</code></h3>
+  <p class="pc-what">Turns the selected parts 15 degrees clockwise.</p>
+  <p>It works like PBROT15 but turns clockwise. The clockwise turn button on the catalog palette runs it, and one U takes it back.</p>
+  <p class="pc-meta">Added in version 0.16.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbattach"><code>PBATTACH</code></h3>
+  <p class="pc-what">Places the 24 inch wave slide at the nearest free connection point to your click.</p>
+  <p>Click near a deck edge. The slide lands on the nearest free connection point within 8 inches. Incompatible pairs are refused and taken points are skipped. Every other slide places from the catalog.</p>
+  <p class="pc-meta">Added in version 0.1.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbmates"><code>PBMATES</code></h3>
+  <p class="pc-what">Shows every connection point in the drawing, green when free and grey when taken.</p>
+  <p>Run it to mark the points. Run it again to hide them. The marks are drawn over the drawing and never added to it, so there is nothing to erase, nothing that plots, and no effect on the parts list. They show the drawing as it was when you ran the command. After moving or placing something, run the command twice to refresh.</p>
+  <p class="pc-meta">Added in version 0.12.0</p>
+</article>
+<h2 id="structure">Structure</h2>
+<article class="pc-feature">
+  <h3 id="pbgen"><code>PBGEN</code></h3>
+  <p class="pc-what">Checks every post in the drawing and puts it right.</p>
+  <p>Run it. There are no prompts. Posts already follow every edit, including plain MOVE, COPY and grips, so run it to check them or after an UNDO. Every part brings the posts its library record names, not only decks. Posts closer than an inch are one shared post, sized for the tallest part standing on it, and carry the real whole-foot catalog part number. Posts already in place are kept, wrong lengths are re-sized, missing ones are added and posts nothing stands on are removed. A designer&#39;s own cut post is never changed; a disagreement is named instead.</p>
+  <p class="pc-meta">Added in version 0.1.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbfill"><code>PBFILL</code></h3>
+  <p class="pc-what">Adds, swaps or removes the fillers where decks of different heights share posts.</p>
+  <p>Run it. There are no prompts. Each height step gets the filler its edge length calls for. Run it again after decks move, change height, or go away: fillers are kept, swapped, or removed to match. One you swapped for an equivalent style is kept. Imported decks that arrive without post data keep their fillers, and the report says how many it could not verify.</p>
+  <p class="pc-meta">Added in version 0.5.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbheight"><code>PBHEIGHT</code></h3>
+  <p class="pc-what">Changes the height of a deck that is already placed.</p>
+  <p>Click a deck, or press Enter for every deck, then give the new height. Heights step by 6 inches, run from 6 to 156, and must sit inside that deck&#39;s rating at its structure&#39;s age range; a structure with no age range set accepts any of the deck&#39;s ratings. A refused height says why, names the range the deck is rated for, and leaves the deck where it was. The tag and the visible label change together. The deck&#39;s posts are re-sized in the same edit, so one UNDO takes back both, and step fillers swap because PBFILL runs itself afterwards. Attached parts keep their own height, so re-place them if the new height changes what fits. The edit survives export back to the design file.</p>
+  <p class="pc-meta">Added in version 0.11.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pblevel"><code>PBLEVEL</code></h3>
+  <p class="pc-what">Lists the storey each part stands on, and lets you select a storey or put each storey on its own layer.</p>
+  <p>Run it for the list: every component and the level it stands on, numbered exactly as an export writes it. Imported designs keep the file&#39;s own storey numbers; parts placed here derive theirs from what stands on what, so a tall shade post is still ground-storey furniture. Then answer the prompt. Name a level to select everything on it, so you can move, measure or inspect the storey as one thing. Answer Layers to file each storey onto its own layer, PB_LVL0, PB_LVL1, and so on. Freeze a layer to hide that storey and build on the one above; posts, fillers, counts and exports still see everything on it. Placing, importing and height edits keep the layers current and report what changed storey. Delete the layers to stop. It never edits a component or the design file.</p>
+  <p class="pc-meta">Added in version 0.13.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbstructure"><code>PBSTRUCTURE</code></h3>
+  <p class="pc-what">Sets the age range, system, mounting, post material and IPEMA rule for one structure, or for the drawing default.</p>
+  <p>A structure is a named group. Run it and click any part of one, or type D for the drawing default. Answer each prompt, or press Enter to keep the value shown: age range, system, mounting (i or s), post material (s or a), and IPEMA-certified parts only (y or n). A swing set or freestanding group is not asked for system, mounting or post material. Parts that no longer fit are listed and selected, and posts and fillers follow in the same command. One U takes it all back.</p>
+  <p class="pc-meta">Added in version 0.16.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbregion"><code>PBREGION</code></h3>
+  <p class="pc-what">Sets the drawing&#39;s region, US or Canada.</p>
+  <p>Run it and answer US or Canada, or press Enter to keep the region shown. The catalog then hides the parts made only for the other country, any placed parts that are out of region are listed and selected, the audit names them, and the export writes the region into the design file. The region is one setting for the whole drawing, kept in it, and a design file import reads it from the file. One U takes it back.</p>
+  <p class="pc-meta">Added in version 0.16.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbsettings"><code>PBSETTINGS</code></h3>
+  <p class="pc-what">Changes one drawing setting from a typed line, the same as a click in the catalog&#39;s settings row.</p>
+  <p>Type one setting: age=2-5, system=R35, mounting=surface, material=aluminum, ipema=yes, region=Canada, deck=48 or show=structure. An empty value, such as age=, sets it back to not set. apply gives the selected parts the row&#39;s settings. use puts the selected parts&#39; settings in the row. use=TOWER puts the TOWER group&#39;s settings in the row, and saveto=TOWER gives the group the row&#39;s settings. clear sets the whole row back to not set. One U takes each back.</p>
+  <p class="pc-meta">Added in version 0.16.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbmigratez"><code>PBMIGRATEZ</code></h3>
+  <p class="pc-what">Lifts parts in older drawings from the ground up to their real heights.</p>
+  <p>Run it once. Every part whose height label shows where it belongs moves there. Carried attachments follow their owner. Posts stay at grade. Anything without that evidence stays where it stands and is named in the report. It moves parts and never erases them. Run it again on a lifted drawing and it finds nothing to do.</p>
+  <p class="pc-meta">Added in version 0.13.0</p>
+</article>
+<h2 id="3d-view">3D view</h2>
+<article class="pc-feature">
+  <h3 id="pb3d"><code>PB3D</code></h3>
+  <p class="pc-what">Opens a 3D view of the parts in the drawing.</p>
+  <p>Toggle the palette. Every placed part renders from the library&#39;s own 3D model: decks at their design height, posts stretched to their part height, slides and climbers at the deck they serve. The picture follows every 2D edit. Drag to orbit, right-drag or middle-drag to pan, and use the wheel to zoom. Click a part in 3D to select it in the drawing. Parts with no 3D model show as orange boxes and are listed by part number.</p>
+  <p class="pc-meta">Added in version 0.10.0</p>
+</article>
+<h2 id="count-and-price">Count and price</h2>
+<article class="pc-feature">
+  <h3 id="pbbom"><code>PBBOM</code></h3>
+  <p class="pc-what">Prints the parts list, tallied by part number and grouped by structure.</p>
+  <p>Run it. Every placed component is tallied by part number, with quantities and descriptions, in sections by structure. It works offline: the tallies come from data cached in the drawing. With the parts database configured it also breaks each part into the smaller parts that make it up, as many levels deep as the data goes. A count it cannot settle says so in a note instead of guessing, and a sub-item row it cannot read is counted conservatively and named. Parts printed as Unassigned are in no group yet.</p>
+  <p class="pc-meta">Added in version 0.1.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbprice"><code>PBPRICE</code></h3>
+  <p class="pc-what">Prices the drawing, with unit and extended MSRP and REP totals.</p>
+  <p>Run it. It prints unit MSRP, then extended MSRP and REP totals for the layout. With live pricing configured, MSRP is fetched fresh every run in the background, so AutoCAD stays responsive. Without it the built-in price list keeps the numbers coming offline. The table names its price source and flags any part with no price on file rather than hiding it from the total.</p>
+  <p class="pc-meta">Added in version 0.1.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbexportbom"><code>PBEXPORTBOM</code></h3>
+  <p class="pc-what">Saves the parts list and prices to a CSV file.</p>
+  <p>Run it and choose where it lands; it suggests the drawing&#39;s name with -bom. The CSV opens cleanly in Excel with the same structure sections, the same per-level rows, and the same MSRP and REP totals as PBPRICE, because both read one tally and one set of prices. The notes print into the footer of the file.</p>
+  <p class="pc-meta">Added in version 0.13.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbpanel"><code>PBPANEL</code></h3>
+  <p class="pc-what">Opens a panel that keeps the parts count and prices current while you work.</p>
+  <p>Toggle the palette and leave it open. It shows parts, support posts, collars, caps and connection hardware, with MSRP and REP totals, recomputed after every edit. Place, move or erase something and the numbers follow. An OFFLINE badge appears when live prices are out of reach; hover it for the price source. Refresh Prices re-checks on demand.</p>
+  <p class="pc-meta">Added in version 0.2.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbsync"><code>PBSYNC</code></h3>
+  <p class="pc-what">Refreshes the part names, descriptions and weights stored in the drawing from the web catalog.</p>
+  <p>Run it. The cached catalog data refreshes in one batched lookup, in the background, so AutoCAD stays responsive. It is the only command that needs the pricing token. Between syncs the drawing keeps working offline.</p>
+  <p class="pc-meta">Added in version 0.1.0</p>
+</article>
+<h2 id="design-files-.kcd">Design files (.kcd)</h2>
+<article class="pc-feature">
+  <h3 id="pbkcdinfo"><code>PBKCDINFO</code></h3>
+  <p class="pc-what">Shows what is in a design file without bringing any of it into the drawing.</p>
+  <p>Pick a .kcd file. It prints per-tab counts: components, distinct support posts, attachment points, fillers. It does not touch the drawing.</p>
+  <p class="pc-meta">Added in version 0.3.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbimportkcd"><code>PBIMPORTKCD</code></h3>
+  <p class="pc-what">Brings one design tab from a .kcd file into the drawing.</p>
+  <p>Pick a file, then a design tab. Every part lands at its exact position, rotation and height. Without a library, parts land as labeled placeholders. Importing the same tab again replaces the earlier import. Posts arrive as they are in the file and are not re-sized on import. The summary lists anything in the file that does not match what arrived, such as post counts or storey numbers.</p>
+  <p class="pc-meta">Added in version 0.3.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbexportkcd"><code>PBEXPORTKCD</code></h3>
+  <p class="pc-what">Writes the drawing out to a .kcd design file.</p>
+  <p>Run it and choose where to save; the default is a new -export copy, so the original is not changed unless you pick it. A drawing that came from a .kcd is written back with your moves, deletions and new parts. A drawing built here is written as a new file. Posts, pairings such as a slide and its wall, each structure&#39;s settings and the region are all written. A .json copy is saved alongside.</p>
+  <p class="pc-meta">Added in version 0.3.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbdeps"><code>PBDEPS</code></h3>
+  <p class="pc-what">Checks a design file for slides missing their required sit-down wall and for broken links between parts.</p>
+  <p>Pick a .kcd file. It reports slides missing a required sit-down, attachments whose parent component is gone, links pointing at components the file no longer holds, and pairs linked in one direction only. Where the design was imported here, it gives drawing positions for what it can locate. It needs the library&#39;s catalog data and refuses to run without it. It only reports; it changes nothing.</p>
+  <p class="pc-meta">Added in version 0.6.0</p>
+</article>
+<h2 id="diagnostics">Diagnostics</h2>
+<article class="pc-feature">
+  <h3 id="pbaudit"><code>PBAUDIT</code></h3>
+  <p class="pc-what">Checks the drawing against the design team&#39;s rules and reports what it finds.</p>
+  <p>Run it. It lists decks 108 inches and up with an open edge, Geo-Wave and traverse heights over the limit, ground panels under a deck too tall for them, the wrong limb climber for a deck, mirrored or scaled parts, and parts that do not fit the settings they were placed with. Limits are read at each structure&#39;s age range. Each finding names the part, gives its position and cites the wiki card the rule comes from. It only reports and never changes the drawing.</p>
+  <p class="pc-meta">Added in version 0.14.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbhello"><code>PBHELLO</code></h3>
+  <p class="pc-what">Prints which build of the plugin is loaded.</p>
+  <p>Run it. It prints one line naming the build. Paste that line into anything you report.</p>
+  <p class="pc-meta">Added in version 0.1.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pbnudge"><code>PBNUDGE</code></h3>
+  <p class="pc-what">Moves a part by a known amount, for automated tests.</p>
+  <p>Not for design work. Use AutoCAD&#39;s own MOVE. This command exists so an automated test can displace a part by a known amount.</p>
+  <p class="pc-meta">Added in version 0.1.0</p>
+</article>
+<article class="pc-feature">
+  <h3 id="pblibcheck"><code>PBLIBCHECK</code></h3>
+  <p class="pc-what">Checks that every part drawing in the library reads and that its connection points match the facts kept beside it.</p>
+  <p>Not for design work. Maintainers run it through build\library-check.ps1, which opens every part drawing read-only and writes a report into the repository. It refuses to write anywhere inside the component library.</p>
+  <p class="pc-meta">Added in version 0.15.0</p>
+</article>
+
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+<div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="../index.html" class="flex align-center">
+        <img src="../icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>Playcraft Suite</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="../user/quickstart.html" class="flex align-center">
+        <span>Quick Start</span>
+        <img src="../icons/forward.svg" class="book-icon" alt="Forward" />
+      </a>
+    
+    </span>
+  </div>
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents"></nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

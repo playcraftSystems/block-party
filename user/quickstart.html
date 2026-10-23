@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Playcraft Suite quick start# Playground design tools for AutoCAD 2027. You place real catalog parts, the posts and fillers are added for you, and the parts list and price update as you work.
+The six commands you will use every day:
+Command What it does PBCATALOG Opens the catalog. Find a part and double-click it to place it. PBSTAMP Places parts one after another, snapped to the parts already there. PBGEN Checks the posts and puts them right. PBFILL Places barrier fillers between decks of different heights. PBPANEL Opens a live parts list with prices. PBBOM Prints the parts list, one section per structure. PBHELLO prints the build you have loaded. Put that line in anything you report.
+">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="/user/quickstart.html">
+	<meta property="og:site_name" content="Playcraft Suite">
+	<meta property="og:title" content="Quick Start">
+	<meta property="og:description" content="Playcraft Suite quick start# Playground design tools for AutoCAD 2027. You place real catalog parts, the posts and fillers are added for you, and the parts list and price update as you work.
+The six commands you will use every day:
+Command What it does PBCATALOG Opens the catalog. Find a part and double-click it to place it. PBSTAMP Places parts one after another, snapped to the parts already there. PBGEN Checks the posts and puts them right. PBFILL Places barrier fillers between decks of different heights. PBPANEL Opens a live parts list with prices. PBBOM Prints the parts list, one section per structure. PBHELLO prints the build you have loaded. Put that line in anything you report.">
+	<meta property="og:locale" content="en">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="user">
+
+
+	<meta itemprop="name" content="Quick Start">
+	<meta itemprop="description" content="Playcraft Suite quick start# Playground design tools for AutoCAD 2027. You place real catalog parts, the posts and fillers are added for you, and the parts list and price update as you work.
+The six commands you will use every day:
+Command What it does PBCATALOG Opens the catalog. Find a part and double-click it to place it. PBSTAMP Places parts one after another, snapped to the parts already there. PBGEN Checks the posts and puts them right. PBFILL Places barrier fillers between decks of different heights. PBPANEL Opens a live parts list with prices. PBBOM Prints the parts list, one section per structure. PBHELLO prints the build you have loaded. Put that line in anything you report.">
+	<meta itemprop="wordCount" content="2973">
+
+<title>Quick Start • Playcraft Suite</title>
+<link rel="icon" href="../favicon.png" >
+<link rel="manifest" href="../manifest.json">
+<link rel="canonical" href="../user/quickstart.html">
+<link rel="stylesheet" href="../book.min.674885deb961fc8191ec9ca087df8ab71ee8ea57b447e6e33f5a92cc2bb8e86b.css" >
+
+
+  
+</head>
+<body dir="ltr" class="book-kind-page book-type-user">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    
+<aside class="book-menu">
+  <div class="book-menu-content">
+    
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="../index.html"><span>Playcraft Suite</span>
+  </a>
+</h2>
+
+
+
+
+
+<nav class="pc-tabs">
+  <a href="../user/index.html">🛝 User Guide</a>
+  <a href="../dev/index.html">🧰 Developer</a>
+  <a href="../api/index.html">📖 API</a>
+</nav>
+
+
+
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../user/index.html" class="">
+      User Guide</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../user/quickstart.html" class="active">
+      Quick Start</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../dev/index.html" class="">
+      Developer Guide</a>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../dev/adding-a-feature.html" class="">
+      Adding a feature</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="../dev/api-reference.html" class="">
+      API reference (Playcraft.Core)</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+
+  </div>
+</aside>
+ 
+
+    <div class="book-page">
+      <header class="book-header hidden">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="../icons/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Quick Start</h3>
+
+  <label for="toc-control">
+    
+    <img src="../icons/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden">
+    
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#install">Install</a></li>
+    <li><a href="#first-run">First run</a></li>
+    <li><a href="#your-first-layout">Your first layout</a></li>
+    <li><a href="#place-parts">Place parts</a>
+      <ul>
+        <li><a href="#pbstamp">PBSTAMP</a></li>
+        <li><a href="#turn-parts-already-placed">Turn parts already placed</a></li>
+        <li><a href="#place-by-hand">Place by hand</a></li>
+      </ul>
+    </li>
+    <li><a href="#set-up-each-structure">Set up each structure</a>
+      <ul>
+        <li><a href="#what-the-row-does">What the row does</a></li>
+        <li><a href="#build-the-next-structure">Build the next structure</a></li>
+        <li><a href="#change-parts-already-placed">Change parts already placed</a></li>
+        <li><a href="#copies">Copies</a></li>
+        <li><a href="#canada">Canada</a></li>
+        <li><a href="#clear-all">Clear all</a></li>
+        <li><a href="#imported-designs-and-named-structures">Imported designs and named structures</a></li>
+        <li><a href="#from-the-keyboard">From the keyboard</a></li>
+      </ul>
+    </li>
+    <li><a href="#name-each-structure-for-the-quote">Name each structure for the quote</a></li>
+    <li><a href="#start-from-a-design-you-already-have">Start from a design you already have</a></li>
+    <li><a href="#find-a-part-in-the-catalog">Find a part in the catalog</a></li>
+    <li><a href="#storeys-and-the-rulebook">Storeys and the rulebook</a>
+      <ul>
+        <li><a href="#pblevel">PBLEVEL</a></li>
+        <li><a href="#pbaudit">PBAUDIT</a></li>
+      </ul>
+    </li>
+    <li><a href="#plain-autocad">Plain AutoCAD</a></li>
+    <li><a href="#new-in-this-build">New in this build</a></li>
+    <li><a href="#every-command">Every command</a>
+      <ul>
+        <li><a href="#setup">Setup</a></li>
+        <li><a href="#place-parts-1">Place parts</a></li>
+        <li><a href="#structure">Structure</a></li>
+        <li><a href="#3d">3D</a></li>
+        <li><a href="#count-and-price">Count and price</a></li>
+        <li><a href="#design-files-kcd">Design files (.kcd)</a></li>
+        <li><a href="#checks">Checks</a></li>
+      </ul>
+    </li>
+    <li><a href="#if-something-looks-wrong">If something looks wrong</a></li>
+    <li><a href="#tell-us-what-you-find">Tell us what you find</a></li>
+  </ul>
+</nav>
+
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown book-article"><h1 id="playcraft-suite-quick-start">Playcraft Suite quick start<a class="anchor" href="#playcraft-suite-quick-start">#</a></h1>
+<p>Playground design tools for AutoCAD 2027. You place real catalog parts, the
+posts and fillers are added for you, and the parts list and price update as you
+work.</p>
+<p>The six commands you will use every day:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Command</th>
+					<th>What it does</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>PBCATALOG</code></td>
+					<td>Opens the catalog. Find a part and double-click it to place it.</td>
+			</tr>
+			<tr>
+					<td><code>PBSTAMP</code></td>
+					<td>Places parts one after another, snapped to the parts already there.</td>
+			</tr>
+			<tr>
+					<td><code>PBGEN</code></td>
+					<td>Checks the posts and puts them right.</td>
+			</tr>
+			<tr>
+					<td><code>PBFILL</code></td>
+					<td>Places barrier fillers between decks of different heights.</td>
+			</tr>
+			<tr>
+					<td><code>PBPANEL</code></td>
+					<td>Opens a live parts list with prices.</td>
+			</tr>
+			<tr>
+					<td><code>PBBOM</code></td>
+					<td>Prints the parts list, one section per structure.</td>
+			</tr>
+	</tbody>
+</table>
+<p><code>PBHELLO</code> prints the build you have loaded. Put that line in anything you
+report.</p>
+<h2 id="install">Install<a class="anchor" href="#install">#</a></h2>
+<ol>
+<li>Open <a href="https://github.com/playcraftSystems/PlaycraftSuite/releases/latest/download/Playcraft.bundle.zip">https://github.com/playcraftSystems/PlaycraftSuite/releases/latest/download/Playcraft.bundle.zip</a>
+in a browser signed in to a GitHub account that has access. Without access
+you get a 404.</li>
+<li>Extract the whole zip. The installer does not run from inside the zip.</li>
+<li>Run <code>install.cmd</code>. It installs for your user only and needs no admin rights.</li>
+<li>Restart AutoCAD 2027.</li>
+</ol>
+<p>You need Windows x64, AutoCAD 2027 and access to the component library folder.
+A pricing token is optional. Without one, prices come from the built-in price
+list.</p>
+<ul>
+<li><strong>To update:</strong> run the new zip&rsquo;s <code>install.cmd</code>.</li>
+<li><strong>To uninstall:</strong> delete <code>%APPDATA%\Autodesk\ApplicationPlugins\Playcraft.bundle</code>.</li>
+<li><strong>To check it loaded:</strong> type <code>PBHELLO</code>. If AutoCAD says <code>Unknown command</code>,
+the zip was not fully extracted before <code>install.cmd</code> ran.</li>
+</ul>
+<h2 id="first-run">First run<a class="anchor" href="#first-run">#</a></h2>
+<p>The setup window opens by itself the first time. <code>PBSETUP</code> opens it again.</p>
+<ol>
+<li>Browse to the folder that holds the family folders (Access Components,
+Decks, and so on). The window shows what it found, such as <code>233 families, 6516 components</code>. <code>0 families</code> means you picked the wrong folder.</li>
+<li>Paste a pricing token if you have one and press <strong>Test connection</strong>. You can
+leave it blank.</li>
+</ol>
+<p>Without a library, parts place as labeled placeholder blocks.</p>
+<h2 id="your-first-layout">Your first layout<a class="anchor" href="#your-first-layout">#</a></h2>
+<ol>
+<li>Type <code>PBCATALOG</code>.</li>
+<li>Type <code>square deck</code> and double-click the first row.</li>
+<li>Press Enter to accept height 48.</li>
+<li>Click at <code>0,0</code>, then at <code>48,0</code>, then press Enter.</li>
+</ol>
+<p>You now have two decks side by side with their posts. Each part brings its own
+posts. Where two parts share a post there is one post, sized for the taller
+part.</p>
+<ol start="5">
+<li>Type <code>PBPANEL</code>. The panel counts and prices the decks and posts, and updates
+after every edit.</li>
+</ol>
+<p>One <code>UNDO</code> takes back a part and its posts together.</p>
+<h2 id="place-parts">Place parts<a class="anchor" href="#place-parts">#</a></h2>
+<h3 id="pbstamp">PBSTAMP<a class="anchor" href="#pbstamp">#</a></h3>
+<p><code>PBSTAMP</code> keeps placing the part you chose. The part follows the cursor and
+snaps to matching connection points. The words at the cursor say what it is
+snapped to, or why it cannot attach and where it could. Click inside a placed
+deck to stack the next storey on it. Click to place, and press Enter to finish.</p>
+<p>While placing, type:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Type</th>
+					<th>What it does</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>Next</code></td>
+					<td>Attaches by the other side. The words say which side, such as &ldquo;2 of 2&rdquo;.</td>
+			</tr>
+			<tr>
+					<td><code>Angle</code></td>
+					<td>Asks for an angle, such as <code>45</code> or <code>-30</code>, for parts that do not snap.</td>
+			</tr>
+			<tr>
+					<td><code>Rotate</code> / <code>Counter</code></td>
+					<td>Turns the part 15° one way or the other.</td>
+			</tr>
+			<tr>
+					<td><code>Turn</code></td>
+					<td>Turns the part 180°.</td>
+			</tr>
+			<tr>
+					<td><code>Free</code></td>
+					<td>Turns the snapping off, and on again.</td>
+			</tr>
+	</tbody>
+</table>
+<p>The angle stays for the rest of the run, so a row of benches all face the same
+way. A part that snaps takes its angle from what it attaches to.</p>
+<p>Over a post, a panel swings around that post with the cursor. Aim it and click,
+and its far post is placed with it.</p>
+<h3 id="turn-parts-already-placed">Turn parts already placed<a class="anchor" href="#turn-parts-already-placed">#</a></h3>
+<p>Select them and type <code>PBROT15</code> (counter-clockwise) or <code>PBROTBACK15</code>
+(clockwise). Each turns 15°. The ⟲ ⟳ buttons on the catalog do the same. A
+selection that includes a deck turns as one structure around its first deck.</p>
+<p>To line a part up with a fence, use AutoCAD&rsquo;s <code>ROTATE</code> with the <code>Reference</code>
+option: pick two points along the part, type <code>Points</code>, then pick two points
+along the fence.</p>
+<h3 id="place-by-hand">Place by hand<a class="anchor" href="#place-by-hand">#</a></h3>
+<p>Plain AutoCAD works too. A part you move into place by hand gets the same posts,
+fillers and price as one that snapped.</p>
+<ul>
+<li>Every connection point, posts included, is a Node snap target. <code>MOVE</code> a part
+by its connection point onto its neighbour&rsquo;s.</li>
+<li>After a <code>MOVE</code>, <code>COPY</code>, <code>ROTATE</code>, <code>STRETCH</code> or grip edit, the command line
+says what followed, such as <code>Posts follow the MOVE: 2 added, 0 re-sized, 4 removed.</code></li>
+<li>A part left a little short is not attached. The command line says so, such as
+<code>S-1101-R5 at (0, 0) is 2&quot; from S-1101-R5 at (43, 0): not attached.</code> <code>MOVE</code> it
+again with Node snap. <code>PBAUDIT</code> lists every such pair.</li>
+<li>A block put in with AutoCAD&rsquo;s <code>INSERT</code> counts after its next edit.</li>
+<li>One <code>UNDO</code> takes back a move and everything that followed it.</li>
+</ul>
+<h2 id="set-up-each-structure">Set up each structure<a class="anchor" href="#set-up-each-structure">#</a></h2>
+<p>The settings row at the top of <code>PBCATALOG</code> says what you are building next.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Setting</th>
+					<th>Choices</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Age</td>
+					<td>2-5, 5-12, 2-12, 6-23, 9-14, 13+ or 14+</td>
+			</tr>
+			<tr>
+					<td>System</td>
+					<td>R5, R35, RH5, RH3 or RV5</td>
+			</tr>
+			<tr>
+					<td>Mounting</td>
+					<td>In ground or Surface mount</td>
+			</tr>
+			<tr>
+					<td>Posts</td>
+					<td>Steel or Aluminum</td>
+			</tr>
+			<tr>
+					<td>Deck</td>
+					<td>A deck height. <code>PBSTAMP</code> offers it first when you place a deck.</td>
+			</tr>
+			<tr>
+					<td>Show</td>
+					<td>Structure parts, Independent items (swings, freestanding, fitness and site items) or All</td>
+			</tr>
+			<tr>
+					<td>IPEMA only</td>
+					<td>Tick box</td>
+			</tr>
+			<tr>
+					<td>Canada</td>
+					<td>Tick box</td>
+			</tr>
+	</tbody>
+</table>
+<p>Each click filters the catalog and the command line says what was set, such as
+<code>Drawing default set: ages 2-5, R5.</code> One <code>UNDO</code> takes back one click. If a
+command is still running, the click waits: press Enter or Esc and click again.</p>
+<h3 id="what-the-row-does">What the row does<a class="anchor" href="#what-the-row-does">#</a></h3>
+<ul>
+<li><strong>The catalog hides parts that do not fit.</strong> The line under the row says how
+many, such as <code>38 parts hidden by the drawing's settings (ages 2-5, R5)</code>.
+Tick <strong>Show hidden parts</strong> to see them, each with its reason. You can still
+place a hidden part. The command line tells you it is hidden and why.</li>
+<li><strong>Parts you place take the row&rsquo;s settings.</strong> Each part keeps the settings it
+was placed with. Changing the row does not change parts already placed, or
+their posts.</li>
+<li><strong>Deck heights are checked for the age.</strong> <code>PBSTAMP</code> and <code>PBHEIGHT</code> refuse a
+height the deck is not rated for, such as <code>S-1101-R5 is not rated for 84&quot; in a 2-5 structure (its 2-5 band rates 6&quot;-72&quot;).</code></li>
+<li><strong>Posts follow mounting and material.</strong> Surface mount and aluminum change the
+post part numbers, such as <code>S-1008-R35-08ft-SMA</code>.</li>
+<li><strong>A deck&rsquo;s posts match the deck.</strong> An R5 deck gets R5 posts and an R35 deck
+gets R35 posts, whatever the row says.</li>
+</ul>
+<h3 id="build-the-next-structure">Build the next structure<a class="anchor" href="#build-the-next-structure">#</a></h3>
+<p>Change the row and keep placing. The parts you already placed keep their
+settings.</p>
+<h3 id="change-parts-already-placed">Change parts already placed<a class="anchor" href="#change-parts-already-placed">#</a></h3>
+<ol>
+<li>Select the parts.</li>
+<li>Click <strong>Apply the row to selection</strong> under the row.</li>
+</ol>
+<p>The parts take the row&rsquo;s settings and their posts are re-picked. Parts that do
+not fit are listed with the reason and selected. One <code>UNDO</code> takes it back.</p>
+<p>When you select parts placed with different settings from the row, a line under
+the row says so, such as <code>12 selected parts were placed with ages 2-5, R35</code>.</p>
+<ul>
+<li><strong>Use these</strong> puts those settings in the row.</li>
+<li><strong>Apply the row to them</strong> gives the parts the row&rsquo;s settings.</li>
+</ul>
+<h3 id="copies">Copies<a class="anchor" href="#copies">#</a></h3>
+<p><code>COPY</code>, <code>MIRROR</code> and <code>ARRAY</code> copies keep the settings of the parts they were
+copied from.</p>
+<h3 id="canada">Canada<a class="anchor" href="#canada">#</a></h3>
+<p>Tick <strong>Canada</strong> in the row. The catalog hides parts made only for the US, and
+placed parts made only for the US are listed. Canada is one setting for the
+whole drawing.</p>
+<h3 id="clear-all">Clear all<a class="anchor" href="#clear-all">#</a></h3>
+<p><strong>Clear all</strong> sets every setting in the row back to not set, turns Canada off,
+sets Show to All, and clears the search, family, price, fit filter and sort.
+Placed parts keep their settings.</p>
+<h3 id="imported-designs-and-named-structures">Imported designs and named structures<a class="anchor" href="#imported-designs-and-named-structures">#</a></h3>
+<ul>
+<li>Importing a <code>.kcd</code> fills the row from the tab you import.</li>
+<li><code>PBSTRUCTURE</code> gives a named group settings of its own. Click any part of the
+group and answer the prompts. Press Enter to keep a value.</li>
+<li>When you select a group with its own settings, a line under the row shows
+them, with <strong>Use these</strong> and <strong>Save the row to</strong> the group.</li>
+</ul>
+<h3 id="from-the-keyboard">From the keyboard<a class="anchor" href="#from-the-keyboard">#</a></h3>
+<p><code>PBSETTINGS</code> does what a click does. Type one setting at a time:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Type</th>
+					<th>What it does</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>age=2-5</code>, <code>system=R5</code>, <code>mounting=surface</code>, <code>material=aluminum</code>, <code>ipema=yes</code>, <code>region=Canada</code>, <code>deck=48</code>, <code>show=structure</code></td>
+					<td>Sets one setting in the row. An empty value, such as <code>age=</code>, sets it back to not set.</td>
+			</tr>
+			<tr>
+					<td><code>apply</code></td>
+					<td>Gives the selected parts the row&rsquo;s settings.</td>
+			</tr>
+			<tr>
+					<td><code>use</code></td>
+					<td>Puts the selected parts&rsquo; settings in the row.</td>
+			</tr>
+			<tr>
+					<td><code>use=TOWER</code></td>
+					<td>Puts the TOWER group&rsquo;s settings in the row.</td>
+			</tr>
+			<tr>
+					<td><code>saveto=TOWER</code></td>
+					<td>Gives the TOWER group the row&rsquo;s settings.</td>
+			</tr>
+			<tr>
+					<td><code>clear</code></td>
+					<td>Sets the whole row back to not set.</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="name-each-structure-for-the-quote">Name each structure for the quote<a class="anchor" href="#name-each-structure-for-the-quote">#</a></h2>
+<p>Group each play structure and give it a name. The parts list and the quote have
+one section per named group.</p>
+<p>Parts in no group are listed by family, such as Decks, Posts and Freestanding
+Slides. Site items such as benches and trash cans go under Site Amenities.
+Swings, freestanding items and site amenities can stay loose. Group a structure
+to list it under its own name.</p>
+<p>To name a structure:</p>
+<ol>
+<li>Type <code>CLASSICGROUP</code>.</li>
+<li>Type the name under Group Name and click <strong>New</strong>.</li>
+<li>Select the structure&rsquo;s parts and press Enter.</li>
+<li>Click <strong>OK</strong>.</li>
+</ol>
+<p>The name you type is the heading on the quote, such as <code>5-12 Composite</code>.
+AutoCAD does not allow <code>/</code> in a name, so write <code>5-12</code>, not <code>5/12</code>.</p>
+<ul>
+<li>Posts, fillers and parts that snap onto a grouped part join its group.</li>
+<li>A swing set saved as its own drawing and brought in with <code>XREF</code> gets its own
+section.</li>
+<li>Do not make a structure into a block. Parts inside a block are left out of
+the parts list and the quote.</li>
+</ul>
+<h2 id="start-from-a-design-you-already-have">Start from a design you already have<a class="anchor" href="#start-from-a-design-you-already-have">#</a></h2>
+<ul>
+<li><strong>A <code>.kcd</code> design file:</strong> <code>PBKCDINFO</code> shows what is in each tab without
+changing the drawing. <code>PBIMPORTKCD</code> brings one tab in at its exact positions
+and heights. Importing the same tab again replaces it.</li>
+<li><strong>An older flat Playcraft drawing:</strong> <code>PBMIGRATEZ</code> lifts parts to their real
+heights. Parts it cannot place for certain stay where they are and are listed.
+You can run it more than once.</li>
+</ul>
+<p><code>PBEXPORTKCD</code> writes the drawing back out to a <code>.kcd</code>. <code>PBDEPS</code> checks a <code>.kcd</code>
+for missing attachments and broken links.</p>
+<p>An imported design is fully built, so most connection points are already taken.
+If a part will not snap, run <code>PBMATES</code>: grey points are taken.</p>
+<h2 id="find-a-part-in-the-catalog">Find a part in the catalog<a class="anchor" href="#find-a-part-in-the-catalog">#</a></h2>
+<p><code>PBCATALOG</code> opens with the cursor in the search box. The best matches come
+first.</p>
+<table>
+	<thead>
+			<tr>
+					<th>Type</th>
+					<th>Finds</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>square deck</code></td>
+					<td>Parts with both words, in any order.</td>
+			</tr>
+			<tr>
+					<td><code>&quot;sit down&quot;</code></td>
+					<td>Parts with that exact phrase.</td>
+			</tr>
+			<tr>
+					<td><code>slide -castle</code></td>
+					<td>Slides, leaving out parts with &ldquo;castle&rdquo;.</td>
+			</tr>
+			<tr>
+					<td><code>S-1101-R5</code>, <code>s1101r5</code></td>
+					<td>That part. Dashes, spaces and case do not matter.</td>
+			</tr>
+			<tr>
+					<td><code>1101</code></td>
+					<td>That part in every rail system.</td>
+			</tr>
+			<tr>
+					<td><code>castel</code></td>
+					<td>Close misspellings still match. The panel shows what it searched for.</td>
+			</tr>
+	</tbody>
+</table>
+<p>The family and price filters and the settings row work together with the
+search. Click a column header to sort, and click it again to reverse. Parts with
+no price show a dash and stay at the bottom.</p>
+<h2 id="storeys-and-the-rulebook">Storeys and the rulebook<a class="anchor" href="#storeys-and-the-rulebook">#</a></h2>
+<h3 id="pblevel">PBLEVEL<a class="anchor" href="#pblevel">#</a></h3>
+<p><code>PBLEVEL</code> lists which storey each part stands on. Type a level number to select
+everything on it. Answer <code>Layers</code> to put each storey on its own layer
+(<code>PB_LVL0</code>, <code>PB_LVL1</code>, and so on). Freeze a layer to hide that storey while you
+work on the one above. Frozen storeys are still counted and exported. Delete the
+<code>PB_LVL</code> layers to stop.</p>
+<h3 id="pbaudit">PBAUDIT<a class="anchor" href="#pbaudit">#</a></h3>
+<p><code>PBAUDIT</code> checks the drawing against the design team&rsquo;s rules and lists what
+breaks them:</p>
+<ul>
+<li>decks 108&quot; and up with an open edge;</li>
+<li>stepping distances, Geo-Wave and traverse heights;</li>
+<li>ground panels under a deck too tall for them;</li>
+<li>the wrong limb climber for the deck;</li>
+<li>mirrored or scaled parts;</li>
+<li>parts that almost touch;</li>
+<li>parts that do not fit the settings they were placed with.</li>
+</ul>
+<p>Each finding names the part and the wiki card the rule comes from. <code>PBAUDIT</code>
+only reports. It never changes the drawing.</p>
+<h2 id="plain-autocad">Plain AutoCAD<a class="anchor" href="#plain-autocad">#</a></h2>
+<p><code>MOVE</code>, <code>COPY</code>, <code>ERASE</code>, <code>ROTATE</code>, layers, groups, xrefs, Properties and <code>UNDO</code>
+all work on Playcraft parts. Posts follow <code>MOVE</code>, <code>COPY</code>, <code>ERASE</code> and grips.
+<code>PBGEN</code> checks them. <code>PBFILL</code> brings the fillers up to date.</p>
+<p>Watch out for these:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Command</th>
+					<th>What happens</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>EXPLODE</code></td>
+					<td>The part becomes plain lines and leaves the quote. <code>UNDO</code> brings it back. Change its layer or colour instead.</td>
+			</tr>
+			<tr>
+					<td><code>MOVE</code> with an object snap</td>
+					<td>The part takes the height of the point you snapped to. The command line says so. Use <code>PBHEIGHT</code> to change heights. <code>OSNAPZ</code> set to <code>1</code> stops snaps changing heights.</td>
+			</tr>
+			<tr>
+					<td><code>COPY</code> of an imported part</td>
+					<td>The copy shares the original&rsquo;s identity until you run <code>PBEXPORTKCD</code>, which gives each copy its own.</td>
+			</tr>
+			<tr>
+					<td><code>MIRROR</code>, <code>SCALE</code></td>
+					<td>The part number does not change, so it is priced as the standard part. Handed parts have their own part numbers in the catalog.</td>
+			</tr>
+	</tbody>
+</table>
+<p>Commands also list what they skipped, such as parts on frozen layers or inside
+blocks. These lines are not errors.</p>
+<h2 id="new-in-this-build">New in this build<a class="anchor" href="#new-in-this-build">#</a></h2>
+<ul>
+<li><strong>Loose parts are listed by family.</strong> Decks, posts and fillers in no group
+go under their family, such as Decks and Posts, not <code>Unassigned</code>.</li>
+<li><strong>Plain messages.</strong> What the plugin prints on the command line and in the panel is short
+and plain, like this guide.</li>
+<li><strong>Parts keep the settings they were placed with.</strong> Change the row to start the
+next structure. Parts already placed, and their posts, do not change.</li>
+<li><strong>A deck&rsquo;s posts match the deck&rsquo;s own system.</strong></li>
+<li><strong>Apply the row to selection</strong> gives selected parts the row&rsquo;s settings.</li>
+<li><strong>Copies keep their settings.</strong></li>
+</ul>
+<p>See <a href="#set-up-each-structure">Set up each structure</a>.</p>
+<h2 id="every-command">Every command<a class="anchor" href="#every-command">#</a></h2>
+<p><code>*</code> means the command needs the component library.</p>
+<h3 id="setup">Setup<a class="anchor" href="#setup">#</a></h3>
+<table>
+	<thead>
+			<tr>
+					<th>Command</th>
+					<th>What it does</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>PBSETUP</code></td>
+					<td>Opens the setup window for the library folder and pricing token.</td>
+			</tr>
+			<tr>
+					<td><code>PBVAULT</code></td>
+					<td>Sets the library folder from the command line.</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="place-parts-1">Place parts<a class="anchor" href="#place-parts-1">#</a></h3>
+<table>
+	<thead>
+			<tr>
+					<th>Command</th>
+					<th>What it does</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>PBCATALOG</code> *</td>
+					<td>Opens the catalog. Search, filter, sort, and double-click a part to place it.</td>
+			</tr>
+			<tr>
+					<td><code>PBFIT</code> *</td>
+					<td>Click a placed part. The catalog then lists only parts that fit it.</td>
+			</tr>
+			<tr>
+					<td><code>PBSTAMP</code> *</td>
+					<td>Places parts one after another, snapped to the parts already there.</td>
+			</tr>
+			<tr>
+					<td><code>PBROT15</code>, <code>PBROTBACK15</code></td>
+					<td>Turns the selected parts 15° counter-clockwise or clockwise.</td>
+			</tr>
+			<tr>
+					<td><code>PBATTACH</code> *</td>
+					<td>Click near a deck edge to attach the 24&quot; Poly Wave Slide.</td>
+			</tr>
+			<tr>
+					<td><code>PBMATES</code></td>
+					<td>Shows every connection point: green is free, grey is taken. Run it again to hide them.</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="structure">Structure<a class="anchor" href="#structure">#</a></h3>
+<table>
+	<thead>
+			<tr>
+					<th>Command</th>
+					<th>What it does</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>PBGEN</code></td>
+					<td>Checks every post and puts it right.</td>
+			</tr>
+			<tr>
+					<td><code>PBFILL</code> *</td>
+					<td>Places barrier fillers where decks of different heights share posts.</td>
+			</tr>
+			<tr>
+					<td><code>PBHEIGHT</code></td>
+					<td>Changes a deck&rsquo;s height. Click a deck, or press Enter for every deck.</td>
+			</tr>
+			<tr>
+					<td><code>PBSETTINGS</code></td>
+					<td>Sets the catalog&rsquo;s settings row from the keyboard.</td>
+			</tr>
+			<tr>
+					<td><code>PBSTRUCTURE</code></td>
+					<td>Gives a named group settings of its own.</td>
+			</tr>
+			<tr>
+					<td><code>PBREGION</code></td>
+					<td>Sets the drawing to US or Canada.</td>
+			</tr>
+			<tr>
+					<td><code>PBLEVEL</code></td>
+					<td>Lists storeys, selects one, or puts each on its own layer.</td>
+			</tr>
+			<tr>
+					<td><code>PBMIGRATEZ</code></td>
+					<td>Lifts an older flat drawing to real heights.</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="3d">3D<a class="anchor" href="#3d">#</a></h3>
+<table>
+	<thead>
+			<tr>
+					<th>Command</th>
+					<th>What it does</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>PB3D</code> *</td>
+					<td>Opens a live 3D view. Drag to orbit, right-drag to pan, scroll to zoom. Click a part to select it.</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="count-and-price">Count and price<a class="anchor" href="#count-and-price">#</a></h3>
+<table>
+	<thead>
+			<tr>
+					<th>Command</th>
+					<th>What it does</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>PBBOM</code></td>
+					<td>Prints the parts list, one section per structure. Works offline.</td>
+			</tr>
+			<tr>
+					<td><code>PBPRICE</code></td>
+					<td>Prints the parts list with MSRP and REP prices.</td>
+			</tr>
+			<tr>
+					<td><code>PBEXPORTBOM</code></td>
+					<td>Saves the priced parts list as a CSV for Excel.</td>
+			</tr>
+			<tr>
+					<td><code>PBPANEL</code></td>
+					<td>Opens a live parts list with prices.</td>
+			</tr>
+			<tr>
+					<td><code>PBSYNC</code></td>
+					<td>Refreshes the catalog data saved in the drawing. Needs the pricing token.</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="design-files-kcd">Design files (.kcd)<a class="anchor" href="#design-files-kcd">#</a></h3>
+<table>
+	<thead>
+			<tr>
+					<th>Command</th>
+					<th>What it does</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>PBKCDINFO</code></td>
+					<td>Shows the part, post and filler counts in each tab of a <code>.kcd</code>.</td>
+			</tr>
+			<tr>
+					<td><code>PBIMPORTKCD</code> *</td>
+					<td>Imports one tab of a <code>.kcd</code>.</td>
+			</tr>
+			<tr>
+					<td><code>PBEXPORTKCD</code> *</td>
+					<td>Writes the drawing to a <code>.kcd</code>, plus a <code>.json</code> copy.</td>
+			</tr>
+			<tr>
+					<td><code>PBDEPS</code> *</td>
+					<td>Checks a <code>.kcd</code> for missing attachments and broken links.</td>
+			</tr>
+	</tbody>
+</table>
+<h3 id="checks">Checks<a class="anchor" href="#checks">#</a></h3>
+<table>
+	<thead>
+			<tr>
+					<th>Command</th>
+					<th>What it does</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><code>PBAUDIT</code></td>
+					<td>Checks the drawing against the design team&rsquo;s rules.</td>
+			</tr>
+			<tr>
+					<td><code>PBHELLO</code></td>
+					<td>Prints the build you have loaded.</td>
+			</tr>
+			<tr>
+					<td><code>PBNUDGE</code></td>
+					<td>Used by test scripts. Use <code>MOVE</code> instead.</td>
+			</tr>
+			<tr>
+					<td><code>PBLIBCHECK</code></td>
+					<td>Checks the part library. For library maintainers.</td>
+			</tr>
+	</tbody>
+</table>
+<h2 id="if-something-looks-wrong">If something looks wrong<a class="anchor" href="#if-something-looks-wrong">#</a></h2>
+<table>
+	<thead>
+			<tr>
+					<th>Problem</th>
+					<th>What to do</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td>Parts place as placeholder blocks</td>
+					<td>The library is not found. Run <code>PBSETUP</code>.</td>
+			</tr>
+			<tr>
+					<td>A part will not snap</td>
+					<td>Run <code>PBMATES</code>. Grey means the point is taken. If it is green and still will not snap, report it.</td>
+			</tr>
+			<tr>
+					<td>A part is missing from the catalog</td>
+					<td>The settings row hides it. Tick <strong>Show hidden parts</strong>.</td>
+			</tr>
+			<tr>
+					<td>A search finds nothing</td>
+					<td>Check the settings row and family filter, or click <strong>Clear all</strong>. A leading <code>-</code> leaves a word out, so remove it from a pasted part number.</td>
+			</tr>
+			<tr>
+					<td>A part is missing from the quote</td>
+					<td>It was exploded. <code>UNDO</code> brings it back.</td>
+			</tr>
+			<tr>
+					<td><code>PBBOM</code> lists a structure&rsquo;s decks under Decks, not its name</td>
+					<td>Its parts are in no named group. See <a href="#name-each-structure-for-the-quote">Name each structure for the quote</a>.</td>
+			</tr>
+			<tr>
+					<td>One structure shows as two sections</td>
+					<td>Its parts are in two groups. Put them in one.</td>
+			</tr>
+			<tr>
+					<td>A whole structure is missing from the parts list</td>
+					<td>It was made into a block. Explode the block and group the parts.</td>
+			</tr>
+			<tr>
+					<td>Two parts look joined but get extra posts</td>
+					<td>They are a little apart. <code>MOVE</code> one with Node snap.</td>
+			</tr>
+			<tr>
+					<td>Setup says <code>0 families</code></td>
+					<td>Pick the folder that holds the family folders.</td>
+			</tr>
+			<tr>
+					<td>PB commands are missing</td>
+					<td>Check you have AutoCAD 2027 and that the zip was fully extracted before <code>install.cmd</code> ran.</td>
+			</tr>
+			<tr>
+					<td>No live prices</td>
+					<td>Run <code>PBSETUP</code>, paste the token and press <strong>Test connection</strong>. Built-in prices still work.</td>
+			</tr>
+	</tbody>
+</table>
+<p>More help: <a href="https://github.com/playcraftSystems/PlaycraftSuite/blob/main/INSTALL.md#troubleshooting">INSTALL.md</a> and the
+<a href="https://playcraftsystems.github.io/block-party/">User Guide</a>.</p>
+<h2 id="tell-us-what-you-find">Tell us what you find<a class="anchor" href="#tell-us-what-you-find">#</a></h2>
+<p>Send four lines:</p>
+<pre tabindex="0"><code>Build:      (the line PBHELLO prints)
+Doing:      what you did, in order
+Expected:   what you thought would happen
+Happened:   what actually happened</code></pre><p>The <strong>Expected</strong> line tells us whether it is a bug or a different idea of how
+it should work.</p>
+<p>Things worth telling us:</p>
+<ul>
+<li>where a part would not snap and the words at the cursor did not say why;</li>
+<li>a count, price or post height that is wrong;</li>
+<li>a part you searched for that was not in the first few rows (tell us what you
+typed);</li>
+<li>a <code>PBAUDIT</code> finding you would have signed off, or a problem it missed.</li>
+</ul>
+<p>A screenshot of the command line helps. The drawing helps most.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+<div>
+
+</div>
+
+<div>
+
+</div>
+
+</div>
+
+<div class="flex flex-wrap justify-between">
+    <span>
+    
+      <a href="../user/index.html" class="flex align-center">
+        <img src="../icons/backward.svg" class="book-icon" alt="Backward" />
+        <span>User Guide</span>
+      </a>
+    
+    </span>
+    <span>
+    
+      <a href="../dev/index.html" class="flex align-center">
+        <span>Developer Guide</span>
+        <img src="../icons/forward.svg" class="book-icon" alt="Forward" />
+      </a>
+    
+    </span>
+  </div>
+
+ 
+        
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+        
+        
+  
+ 
+        
+  
+    <script>(function(){document.querySelectorAll("pre:has(code)").forEach(e=>{e.addEventListener("click",e.focus),e.addEventListener("copy",function(t){if(t.preventDefault(),navigator.clipboard){const t=window.getSelection().toString()||e.textContent;navigator.clipboard.writeText(t)}})})})()</script>
+  
+
+      </footer>
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  
+  <aside class="book-toc">
+    <div class="book-toc-content">
+      
+  
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#install">Install</a></li>
+    <li><a href="#first-run">First run</a></li>
+    <li><a href="#your-first-layout">Your first layout</a></li>
+    <li><a href="#place-parts">Place parts</a>
+      <ul>
+        <li><a href="#pbstamp">PBSTAMP</a></li>
+        <li><a href="#turn-parts-already-placed">Turn parts already placed</a></li>
+        <li><a href="#place-by-hand">Place by hand</a></li>
+      </ul>
+    </li>
+    <li><a href="#set-up-each-structure">Set up each structure</a>
+      <ul>
+        <li><a href="#what-the-row-does">What the row does</a></li>
+        <li><a href="#build-the-next-structure">Build the next structure</a></li>
+        <li><a href="#change-parts-already-placed">Change parts already placed</a></li>
+        <li><a href="#copies">Copies</a></li>
+        <li><a href="#canada">Canada</a></li>
+        <li><a href="#clear-all">Clear all</a></li>
+        <li><a href="#imported-designs-and-named-structures">Imported designs and named structures</a></li>
+        <li><a href="#from-the-keyboard">From the keyboard</a></li>
+      </ul>
+    </li>
+    <li><a href="#name-each-structure-for-the-quote">Name each structure for the quote</a></li>
+    <li><a href="#start-from-a-design-you-already-have">Start from a design you already have</a></li>
+    <li><a href="#find-a-part-in-the-catalog">Find a part in the catalog</a></li>
+    <li><a href="#storeys-and-the-rulebook">Storeys and the rulebook</a>
+      <ul>
+        <li><a href="#pblevel">PBLEVEL</a></li>
+        <li><a href="#pbaudit">PBAUDIT</a></li>
+      </ul>
+    </li>
+    <li><a href="#plain-autocad">Plain AutoCAD</a></li>
+    <li><a href="#new-in-this-build">New in this build</a></li>
+    <li><a href="#every-command">Every command</a>
+      <ul>
+        <li><a href="#setup">Setup</a></li>
+        <li><a href="#place-parts-1">Place parts</a></li>
+        <li><a href="#structure">Structure</a></li>
+        <li><a href="#3d">3D</a></li>
+        <li><a href="#count-and-price">Count and price</a></li>
+        <li><a href="#design-files-kcd">Design files (.kcd)</a></li>
+        <li><a href="#checks">Checks</a></li>
+      </ul>
+    </li>
+    <li><a href="#if-something-looks-wrong">If something looks wrong</a></li>
+    <li><a href="#tell-us-what-you-find">Tell us what you find</a></li>
+  </ul>
+</nav>
+
+
+
+    </div>
+  </aside>
+  
+ 
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
